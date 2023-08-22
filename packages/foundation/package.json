@@ -32,5 +32,8 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "coral-system": "^1.0.6"
   }
 }

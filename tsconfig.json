@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.prod.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmit": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "strictFunctionTypes": true,
+    "paths": {
+      "@music163/foundation": ["packages/foundation/src/index.ts"],
+      "@music163/antd": ["packages/antd/src/index.ts"],
+      "@music163/formily": ["packages/formily/src/index.ts"]
+    }
+  }
+}

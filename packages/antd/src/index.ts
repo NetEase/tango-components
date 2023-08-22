@@ -1,3 +1,1 @@
-export function foo() {
-  console.log('hello');
-}
+export * from 'antd';

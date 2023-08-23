@@ -1,20 +1,16 @@
 import React from 'react';
-import { isDeepEquals, isFunction, isNil } from '../helpers';
+import { Collector } from '@music163/tango-boot';
+import { isDeepEquals, isFunction, isNil, mergeRefs } from '../helpers';
 
-type LoadDataConfig = {
+interface LoadDataConfig {
   /**
    * 用于取消请求的 signal 实例，例如 fetch(url, { signal })
    */
   signal?: AbortSignal;
   [key: string]: any;
-};
+}
 
-export interface DataProviderProps {
-  /**
-   * 同步数据到的 store 属性
-   * FIXME: 使用 hoc 来实现同步 model 的功能
-   */
-  // model?: string;
+interface DataProviderBaseProps {
   /**
    * 数据的方法，支持异步数据源的载入
    */
@@ -52,7 +48,7 @@ const defaultShouldLoadData = () => true;
 /**
  * 数据提供者
  */
-export class DataProviderBase extends React.Component<DataProviderProps, DataProviderStateType> {
+class DataProviderBase extends React.Component<DataProviderBaseProps, DataProviderStateType> {
   static defaultProps = {
     shouldLoadData: defaultShouldLoadData,
   };
@@ -97,7 +93,7 @@ export class DataProviderBase extends React.Component<DataProviderProps, DataPro
     this.load();
   }
 
-  componentDidUpdate(prevProps: Readonly<DataProviderProps>) {
+  componentDidUpdate(prevProps: Readonly<DataProviderBaseProps>) {
     if (!isDeepEquals(prevProps.payload, this.props.payload)) {
       this.load();
     }
@@ -122,14 +118,31 @@ export class DataProviderBase extends React.Component<DataProviderProps, DataPro
       data = formatter(data);
     }
 
+    this.setState({ data });
+
     if (isFunction(onData)) {
       onData(data);
     }
-
-    // if (model) {
-    //   tango.setStoreValue(model, data);
-    // }
-
-    this.setState({ data });
   }
 }
+
+export const DataProvider = React.forwardRef((props, ref) => {
+  return (
+    <Collector
+      {...props}
+      render={({ setValue, ref: tangoRef }) => {
+        return (
+          <DataProviderBase
+            {...props}
+            onData={(data) => {
+              setValue(data);
+            }}
+            ref={mergeRefs(ref, tangoRef)}
+          />
+        );
+      }}
+    />
+  );
+});
+
+DataProvider.displayName = 'DataProvider';

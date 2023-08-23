@@ -4,7 +4,10 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 module.exports = {
   mode: 'development',
   devtool: 'eval-source-map',
-  entry: './src/index.ts',
+  entry: {
+    index: './src/index.ts',
+    designer: './src/designer.ts',
+  },
   module: {
     rules: [
       {
@@ -33,7 +36,7 @@ module.exports = {
     moment: 'moment',
   },
   output: {
-    filename: 'antd.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, './dist'),
     publicPath: '', // relative to HTML page (same directory)
     library: 'TangoAntd',

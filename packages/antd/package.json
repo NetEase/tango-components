@@ -22,7 +22,10 @@
     "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
     "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
     "build:umd": "webpack --config webpack.config.js",
-    "copy:less": "copyfiles -u 1 src/**/*.less lib/esm && copyfiles -u 1 src/**/*.less lib/cjs",
+    "copy:less": "yarn copy:less2esm && yarn copy:less2cjs && yarn copy:less2dist",
+    "copy:less2esm": "copyfiles -u 1 src/**/*.less lib/esm",
+    "copy:less2cjs": "copyfiles -u 1 src/**/*.less lib/cjs",
+    "copy:less2dist": "copyfiles -u 1 src/**/*.less dist",
     "prepublishOnly": "yarn build"
   },
   "bugs": {
@@ -33,8 +36,9 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@music163/tango-boot": "^0.1.2",
     "@music163/foundation": "^0.1.0",
+    "@music163/tango-boot": "^0.1.2",
+    "@music163/tango-helpers": "^0.1.1",
     "antd": "4"
   }
 }

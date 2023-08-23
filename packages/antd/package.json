@@ -17,10 +17,11 @@
     "url": "git+https://github.com/music163/tango-components.git"
   },
   "scripts": {
-    "clean": "rimraf lib/",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn copy:less",
+    "clean": "rimraf lib/ && rimraf dist/",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:umd && yarn copy:less",
     "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
     "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
+    "build:umd": "webpack --config webpack.config.js",
     "copy:less": "copyfiles -u 1 src/**/*.less lib/esm && copyfiles -u 1 src/**/*.less lib/cjs",
     "prepublishOnly": "yarn build"
   },

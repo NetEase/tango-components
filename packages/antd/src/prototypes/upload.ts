@@ -1,0 +1,351 @@
+import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { StylePrototypes } from './common';
+
+export const Upload: ComponentPrototypeType = {
+  name: 'Upload',
+  title: '上传',
+  package: '@music163/antd',
+  icon: 'icon-shangchuan',
+  type: 'element',
+  help: '基础的文件选择上传和拖拽上传控件',
+  hasChildren: true,
+  childrenName: 'Button',
+  initChildren: '<Button children="Click to Upload"></Button>',
+  relatedImports: ['Button'],
+  props: [
+    ...StylePrototypes,
+    {
+      name: 'accept',
+      title: '接受上传的文件类型',
+      setter: 'textSetter',
+    },
+    { name: 'action', title: '上传的地址', setter: 'textSetter' },
+    {
+      name: 'beforeUpload',
+      title: '上传文件之前的钩子',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'customRequest',
+      title: '覆盖默认的上传行为',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'data',
+      title: '额外参数',
+      tip: '上传所需额外参数或返回上传额外参数的方法',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'defaultFileList',
+      title: '默认已上传文件列表',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'directory',
+      title: '支持上传文件夹',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'disabled',
+      title: '是否禁用',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'fileList',
+      title: '已经上传的文件列表（受控）',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'headers',
+      title: '设置上传的请求头部',
+      tip: '设置上传的请求头部，IE10 以上有效',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'iconRender',
+      title: '自定义显示 icon',
+      setter: 'iconSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'isImageUrl',
+      title: '使用 <img /> 标签显示',
+      tip: '自定义缩略图是否使用 <img /> 标签进行显示',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'itemRender',
+      title: '自定义上传列表项',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'listType',
+      title: '上传列表的内建样式',
+      setter: 'pickerSetter',
+      group: 'advanced',
+      setterProps: {
+        options: [
+          { label: 'text', value: 'text' },
+          { label: 'picture', value: 'picture' },
+          { label: 'picture-card', value: 'picture-card' },
+        ],
+      },
+    },
+    {
+      name: 'maxCount',
+      title: '限制上传数量',
+      setter: 'numberSetter',
+    },
+    {
+      name: 'method',
+      title: '上传请求的 http method',
+      setter: 'textSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'multiple',
+      title: '是否支持多选文件',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'name',
+      title: '发到后台的文件参数名',
+      setter: 'textSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'openFileDialogOnClick',
+      title: '点击打开文件对话框',
+      setter: 'boolSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'previewFile',
+      title: '自定义文件预览逻辑',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'progress',
+      title: '自定义进度条样式',
+      setter: 'expressionSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'showUploadList',
+      title: '是否展示文件列表',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'withCredentials',
+      title: '上传请求时是否携带 cookie',
+      setter: 'boolSetter',
+      group: 'advanced',
+    },
+    {
+      name: 'onChange',
+      title: '上传文件改变时的状态',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onDrop',
+      title: '文件拖入上传区域回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onDownload',
+      title: '点击下载文件时的回调',
+      tip: '点击下载文件时的回调，如果没有指定，则默认跳转到文件 url 对应的标签页',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onPreview',
+      title: '点击文件链接或预览图标时的回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onRemove',
+      title: '点击移除文件时的回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+  ],
+};
+
+export const UploadDragger: ComponentPrototypeType = {
+  name: 'UploadDragger',
+  title: '拖拽上传',
+  package: '@music163/antd',
+  icon: '',
+  type: 'element',
+  props: [
+    ...StylePrototypes,
+    {
+      name: 'accept',
+      title: '接受上传的文件类型',
+      setter: 'textSetter',
+    },
+    { name: 'action', title: '上传的地址', setter: 'textSetter' },
+    {
+      name: 'beforeUpload',
+      title: '上传文件之前的钩子',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'customRequest',
+      title: '覆盖默认的上传行为',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'data',
+      title: '额外参数',
+      tip: '上传所需额外参数或返回上传额外参数的方法',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'defaultFileList',
+      title: '默认已上传文件列表',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'directory',
+      title: '支持上传文件夹',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'disabled',
+      title: '是否禁用',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'fileList',
+      title: '已经上传的文件列表（受控）',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'headers',
+      title: '设置上传的请求头部',
+      tip: '设置上传的请求头部，IE10 以上有效',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'iconRender',
+      title: '自定义显示 icon',
+      setter: 'iconSetter',
+    },
+    {
+      name: 'isImageUrl',
+      title: '使用 <img /> 标签显示',
+      tip: '自定义缩略图是否使用 <img /> 标签进行显示',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'itemRender',
+      title: '自定义上传列表项',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'listType',
+      title: '上传列表的内建样式',
+      setter: 'pickerSetter',
+      setterProps: {
+        options: [
+          { label: 'text', value: 'text' },
+          { label: 'picture', value: 'picture' },
+          { label: 'picture-card', value: 'picture-card' },
+        ],
+      },
+    },
+    {
+      name: 'maxCount',
+      title: '限制上传数量',
+      setter: 'numberSetter',
+    },
+    {
+      name: 'method',
+      title: '上传请求的 http method',
+      setter: 'textSetter',
+    },
+    {
+      name: 'multiple',
+      title: '是否支持多选文件',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'name',
+      title: '发到后台的文件参数名',
+      setter: 'textSetter',
+    },
+    {
+      name: 'openFileDialogOnClick',
+      title: '点击打开文件对话框',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'previewFile',
+      title: '自定义文件预览逻辑',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'progress',
+      title: '自定义进度条样式',
+      setter: 'expressionSetter',
+    },
+    {
+      name: 'showUploadList',
+      title: '是否展示文件列表',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'withCredentials',
+      title: '上传请求时是否携带 cookie',
+      setter: 'boolSetter',
+    },
+    {
+      name: 'onChange',
+      title: '上传文件改变时的状态',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onDrop',
+      title: '文件拖入上传区域回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onDownload',
+      title: '点击下载文件时的回调',
+      tip: '点击下载文件时的回调，如果没有指定，则默认跳转到文件 url 对应的标签页',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onPreview',
+      title: '点击文件链接或预览图标时的回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'onRemove  ',
+      title: '点击移除文件时的回调',
+      setter: 'actionSetter',
+      group: 'event',
+    },
+    {
+      name: 'height',
+      title: '高度',
+      setter: 'textSetter',
+    },
+  ],
+};

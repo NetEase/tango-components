@@ -1,5 +1,4 @@
-import { Button } from './Button';
-import { Box } from '@music163/foundation';
+import { Button } from '@music163/antd';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -17,34 +16,24 @@ export default {
   },
 };
 
-export const Basic = () => {
-  return <Box>hello</Box>
-}
-
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary = {
   args: {
-    primary: true,
-    label: 'Button',
-  },
-};
-
-export const Secondary = {
-  args: {
-    label: 'Button',
+    type: 'primary',
+    children: 'Button',
   },
 };
 
 export const Large = {
   args: {
     size: 'large',
-    label: 'Button',
+    children: 'Button',
   },
 };
 
 export const Small = {
   args: {
     size: 'small',
-    label: 'Button',
+    children: 'Button',
   },
 };

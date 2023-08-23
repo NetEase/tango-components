@@ -1,3 +1,5 @@
+import '@music163/antd/lib/esm/index.less';
+
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {

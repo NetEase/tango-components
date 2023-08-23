@@ -18,9 +18,10 @@
   },
   "scripts": {
     "clean": "rimraf lib/",
-    "build": "yarn clean && yarn build:esm && yarn build:cjs",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn copy:less",
     "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
     "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
+    "copy:less": "copyfiles -u 1 src/**/*.less lib/esm && copyfiles -u 1 src/**/*.less lib/cjs",
     "prepublishOnly": "yarn build"
   },
   "bugs": {
@@ -31,6 +32,8 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
+    "@music163/tango-boot": "^0.1.2",
+    "@music163/foundation": "^0.1.0",
     "antd": "4"
   }
 }

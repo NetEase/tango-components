@@ -1,6 +1,6 @@
 {
   "name": "@music163/antd",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "antd components for tango app",
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/music163/tango-components#readme",
@@ -36,7 +36,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@music163/foundation": "^0.1.0",
+    "@music163/foundation": "^0.1.1",
     "@music163/tango-boot": "^0.1.2",
     "@music163/tango-helpers": "^0.1.1",
     "antd": "4"

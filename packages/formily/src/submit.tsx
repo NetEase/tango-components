@@ -1,6 +1,6 @@
 import React from 'react';
 import { IFormFeedback } from '@formily/core';
-import { observer, useParentForm } from '@formily/react';
+import { useParentForm } from '@formily/react';
 import { Button, ButtonProps } from 'antd';
 
 export interface SubmitProps extends ButtonProps {
@@ -10,30 +10,28 @@ export interface SubmitProps extends ButtonProps {
   onSubmitFailed?: (feedbacks: IFormFeedback[]) => void;
 }
 
-export const Submit = observer(
-  ({
-    onSubmit,
-    onSubmitFailed,
-    onSubmitSuccess,
-    children,
-    loading,
-    onClick,
-    ...rest
-  }: SubmitProps) => {
-    const form = useParentForm();
-    return (
-      <Button
-        htmlType={onSubmit ? 'button' : 'submit'}
-        type="primary"
-        {...rest}
-        loading={loading ?? form.submitting}
-        onClick={(e) => {
-          onClick?.(e);
-          form.submit(onSubmit).then(onSubmitSuccess).catch(onSubmitFailed);
-        }}
-      >
-        {children}
-      </Button>
-    );
-  },
-);
+export const Submit = ({
+  onSubmit,
+  onSubmitFailed,
+  onSubmitSuccess,
+  children,
+  loading,
+  onClick,
+  ...rest
+}: SubmitProps) => {
+  const form = useParentForm();
+  return (
+    <Button
+      htmlType={onSubmit ? 'button' : 'submit'}
+      type="primary"
+      {...rest}
+      loading={loading ?? form.submitting}
+      onClick={(e) => {
+        onClick?.(e);
+        form.submit(onSubmit).then(onSubmitSuccess).catch(onSubmitFailed);
+      }}
+    >
+      {children}
+    </Button>
+  );
+};

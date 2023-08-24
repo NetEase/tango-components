@@ -1,14 +1,9 @@
-import { Form, FormItem, FormConsumer, Submit, createForm } from '@music163/formily';
+import { Form, FormItem, FormConsumer, Submit, Reset, createForm } from '@music163/formily';
+import { Box } from '@music163/foundation';
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'formily/Form',
   component: Form,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
-    layout: 'center',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
 };
 
@@ -17,21 +12,18 @@ const form = createForm();
 export const Basic = () => {
   return (
     <Form form={form}>
-      <FormItem name="input" label="输入框" type="Input" />
+      <FormItem name="input" label="输入框" type="Input" required initialValue="Hello world" />
       <FormConsumer>
         {() => (
-          <div
-            style={{
-              marginBottom: 20,
-              padding: 5,
-              border: '1px dashed #666',
-            }}
-          >
+          <Box mb={20} p={5} border={'1px dashed red'}>
             实时响应：{form.values.input}
-          </div>
+          </Box>
         )}
       </FormConsumer>
-      <Submit onSubmit={console.log}>提交</Submit>
+      <FormItem label=" ">
+        <Submit onSubmit={console.log}>提交</Submit>
+        <Reset>重置</Reset>
+      </FormItem>
     </Form>
   );
 };

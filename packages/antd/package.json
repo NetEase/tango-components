@@ -39,6 +39,8 @@
     "@music163/foundation": "^0.1.1",
     "@music163/tango-boot": "^0.1.2",
     "@music163/tango-helpers": "^0.1.1",
-    "antd": "4"
+    "antd": "4",
+    "classnames": "^2.3.2",
+    "coral-system": "^1.0.6"
   }
 }

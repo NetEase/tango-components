@@ -23,3 +23,22 @@ export const Input = forwardRef((props, ref) => {
 });
 
 Input.displayName = 'Input';
+
+export const TextArea = forwardRef((props, ref) => (
+  <Collector
+    {...props}
+    render={({ value, setValue, ref: tangoRef }) => (
+      <AntInput.TextArea
+        ref={mergeRefs(ref, tangoRef)}
+        {...props}
+        value={value}
+        onChange={(e) => {
+          const next = e.target.value;
+          setValue(next);
+        }}
+      />
+    )}
+  />
+));
+
+TextArea.displayName = 'TextArea';

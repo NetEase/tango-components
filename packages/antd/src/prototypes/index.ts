@@ -24,6 +24,7 @@ export * from './each';
 export * from './edit-actions';
 export * from './empty';
 export * from './form';
+export * from './formily';
 export * from './iframe';
 export * from './image';
 export * from './input-number';

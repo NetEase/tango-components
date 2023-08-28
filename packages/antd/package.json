@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@music163/foundation": "^0.1.2",
+    "@music163/formily": "^0.1.2",
     "@music163/tango-boot": "^0.1.2",
     "@music163/tango-helpers": "^0.1.1",
     "antd": "4",

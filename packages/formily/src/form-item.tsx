@@ -2,10 +2,10 @@ import React from 'react';
 import cx from 'classnames';
 import { css } from 'coral-system';
 import { Field, connect, mapProps } from '@formily/react';
+import { isVoidField } from '@formily/core';
 import { Box } from '@music163/foundation';
 import { componentsMap } from './components';
 import { useFormLayout } from './form-layout';
-import { isVoidField } from '@formily/core';
 
 export interface FormItemProps {
   label: string;

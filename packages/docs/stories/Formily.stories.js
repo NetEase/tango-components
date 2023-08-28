@@ -24,7 +24,7 @@ export const Basic = () => {
           ],
           style: {
             width: 200,
-          }
+          },
         }}
         required
       />

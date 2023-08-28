@@ -10,20 +10,24 @@ import { isVoidField } from '@formily/core';
 export interface FormItemProps {
   label: string;
   name: string;
-  type: string | React.ComponentType<any>;
+  component: string | React.ComponentType<any>;
+  componentProps?: Record<string, any>;
   required?: boolean;
   initialValue?: any;
 }
 
 export function FormItem(props: FormItemProps) {
-  const { label, type, name, ...others } = props;
+  const { label, component, componentProps = {}, name, ...others } = props;
   if (!name) {
     return <FormItemControl label={label} {...others} />;
   }
 
   return (
     <Field
-      component={[typeof type === 'string' ? componentsMap[type] : type]}
+      component={[
+        typeof component === 'string' ? componentsMap[component] : component,
+        componentProps,
+      ]}
       decorator={[FormItemDecorator]}
       title={label}
       name={name}

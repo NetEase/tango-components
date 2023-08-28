@@ -12,7 +12,22 @@ const form = createForm();
 export const Basic = () => {
   return (
     <Form form={form}>
-      <FormItem name="input" label="输入框" type="Input" required initialValue="Hello world" />
+      <FormItem name="input" label="输入框" component="Input" required initialValue="Hello world" />
+      <FormItem
+        name="select"
+        label="选择框"
+        component="Select"
+        componentProps={{
+          options: [
+            { label: '选项1', value: 1 },
+            { label: '选项2', value: 2 },
+          ],
+          style: {
+            width: 200,
+          }
+        }}
+        required
+      />
       <FormConsumer>
         {() => (
           <Box mb={20} p={5} border={'1px dashed red'}>

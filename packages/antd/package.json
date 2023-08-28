@@ -3,7 +3,7 @@
   "version": "0.1.2",
   "description": "antd components for tango app",
   "author": "wwsun <ww.sww@outlook.com>",
-  "homepage": "https://github.com/music163/tango-components#readme",
+  "homepage": "https://github.com/netease/tango-components#readme",
   "license": "MIT",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/music163/tango-components.git"
+    "url": "git+https://github.com/netease/tango-components.git"
   },
   "scripts": {
     "clean": "rimraf lib/ && rimraf dist/",
@@ -29,7 +29,7 @@
     "prepublishOnly": "yarn build"
   },
   "bugs": {
-    "url": "https://github.com/music163/tango-components/issues"
+    "url": "https://github.com/netease/tango-components/issues"
   },
   "publishConfig": {
     "access": "public",

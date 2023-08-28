@@ -4,19 +4,19 @@
   "private": true,
   "description": "storybook docs",
   "author": "wwsun <ww.sww@outlook.com>",
-  "homepage": "https://github.com/music163/tango-components#readme",
+  "homepage": "https://github.com/netease/tango-components#readme",
   "license": "MIT",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/music163/tango-components.git"
+    "url": "git+https://github.com/netease/tango-components.git"
   },
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "bugs": {
-    "url": "https://github.com/music163/tango-components/issues"
+    "url": "https://github.com/netease/tango-components/issues"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.10",

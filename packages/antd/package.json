@@ -22,6 +22,7 @@
     "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
     "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
     "build:umd": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.dev.js",
     "copy:less": "yarn copy:less2esm && yarn copy:less2cjs && yarn copy:less2dist",
     "copy:less2esm": "copyfiles -u 1 src/**/*.less lib/esm",
     "copy:less2cjs": "copyfiles -u 1 src/**/*.less lib/cjs",

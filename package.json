@@ -7,6 +7,7 @@
   "scripts": {
     "start": "yarn workspace docs storybook",
     "build": "lerna run build",
+    "serve": "yarn workspace @music163/antd serve",
     "test": "jest",
     "test:watch": "jest --watch",
     "eslint": "eslint packages/**/src/*.{ts,tsx}",
@@ -41,6 +42,7 @@
     "progress-bar-webpack-plugin": "^2.1.0",
     "typescript": "^5.1.6",
     "webpack": "^5.88.2",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   }
 }

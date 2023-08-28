@@ -21,7 +21,6 @@ export * from './divider';
 export * from './drawer';
 export * from './dropdown';
 export * from './each';
-export * from './edit-actions';
 export * from './empty';
 export * from './form';
 export * from './formily';

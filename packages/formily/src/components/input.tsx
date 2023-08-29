@@ -9,3 +9,5 @@ export const Input = connect(
     suffix: <span>{field?.loading || field?.validating ? 'loading' : props.suffix}</span>,
   })),
 );
+
+export const TextArea = connect(AntdInput.TextArea);

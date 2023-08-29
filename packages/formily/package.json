@@ -42,5 +42,6 @@
     "antd": "4",
     "classnames": "^2.3.2",
     "coral-system": "^1.0.6"
-  }
+  },
+  "gitHead": "3ad958237a4a81a2410a9b08abef73a411cc5756"
 }

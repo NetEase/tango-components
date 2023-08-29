@@ -2,6 +2,7 @@ import { ComponentPrototypeType } from '@music163/tango-helpers';
 import { omitProps } from '../helpers';
 import { Input } from './input';
 import { Select } from './select';
+import { Button } from './button';
 
 const componentPrototypeMap = {
   Input,
@@ -88,4 +89,28 @@ export const FormilyFormItem: ComponentPrototypeType = {
       disableVariableSetter: true,
     },
   ],
+};
+
+export const FormilySubmit: ComponentPrototypeType = {
+  title: '提交',
+  name: 'FormilySubmit',
+  exportType: 'namedExport',
+  icon: 'icon-anniu',
+  type: 'element',
+  package: '@music163/antd',
+  help: '提交表单',
+  hasChildren: false,
+  props: Button.props,
+};
+
+export const FormilyReset: ComponentPrototypeType = {
+  title: '重置',
+  name: 'FormilyReset',
+  exportType: 'namedExport',
+  icon: 'icon-anniu',
+  type: 'element',
+  package: '@music163/antd',
+  help: '重置表单。',
+  hasChildren: false,
+  props: Button.props,
 };

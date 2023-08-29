@@ -10,3 +10,8 @@ export const FormilyForm = withDnd({ name: 'FormilyForm' })(({ children }: any) 
 export const FormilyFormItem = withDnd({ name: 'FormilyFormItem' })(FormItem);
 export const FormilySubmit = withDnd({ name: 'FormilySubmit', display: 'inline-block' })(Submit);
 export const FormilyReset = withDnd({ name: 'FormilyReset', display: 'inline-block' })(Reset);
+
+export {
+  FormConsumer as FormilyFormConsumer,
+  createForm as createFormilyForm,
+} from '@music163/formily';

@@ -32,3 +32,42 @@ export const InstancePrototypes: ComponentPropType[] = [
     disableVariableSetter: true,
   },
 ];
+
+export const CommonSystemStylePrototypes: ComponentPropType[] = [
+  {
+    name: 'color',
+    title: '文本颜色',
+    setter: 'colorSetter',
+    group: 'style',
+  },
+  {
+    name: 'bg',
+    title: '背景色',
+    setter: 'bgSetter',
+    group: 'style',
+  },
+  {
+    name: 'opacity',
+    title: '透明度',
+    setter: 'sliderSetter',
+    setterProps: {
+      max: 1,
+      min: 0,
+      step: 0.1,
+    },
+    defaultValue: 1,
+    group: 'style',
+  },
+  {
+    name: 'm',
+    title: '外间距',
+    setter: 'spacingSetter',
+    group: 'style',
+  },
+  {
+    name: 'p',
+    title: '内间距',
+    setter: 'spacingSetter',
+    group: 'style',
+  },
+];

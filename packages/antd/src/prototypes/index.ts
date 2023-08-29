@@ -42,6 +42,7 @@ export * from './progress';
 export * from './radio';
 export * from './rate';
 export * from './result';
+export * from './section';
 export * from './select';
 export * from './skeleton';
 export * from './slider';

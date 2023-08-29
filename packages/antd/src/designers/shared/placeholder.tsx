@@ -31,9 +31,9 @@ const placeholderStyle = css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--music-colors-gray-1);
-  color: var(--music-colors-gray-4);
-  border: 1px solid var(--music-colors-gray-3);
+  background-color: #efefef;
+  color: #333;
+  border: 1px solid #666;
   padding-left: 12px;
   padding-right: 12px;
   user-select: none;

@@ -33,6 +33,7 @@ export {
   Mentions,
   Menu,
   Modal,
+  Page,
   PageHeader,
   Pagination,
   Popconfirm,

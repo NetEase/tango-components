@@ -1,4 +1,39 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import {
+  Input,
+  Select,
+  TextArea,
+  Cascader,
+  CheckboxGroup,
+  RadioGroup,
+  DatePicker,
+  DateRangePicker,
+  TimeRangePicker,
+  TimePicker,
+  InputNumber,
+  Switch,
+  TreeSelect,
+} from '@music163/antd/lib/esm/prototypes';
+
+const componentMap = {
+  Input,
+  Select,
+  TextArea,
+  Cascader,
+  CheckboxGroup,
+  RadioGroup,
+  DatePicker,
+  DateRangePicker,
+  TimeRangePicker,
+  TimePicker,
+  InputNumber,
+  Switch,
+  TreeSelect,
+};
+
+function omitProps(props: ComponentPrototypeType['props'], omitList: string[]) {
+  return props?.filter((prop) => !omitList.includes(prop.name));
+}
 
 export const FormItem: ComponentPrototypeType = {
   name: 'FormItem',
@@ -45,6 +80,21 @@ export const FormItem: ComponentPrototypeType = {
       name: 'componentProps',
       title: '控件属性',
       setter: 'expressionSetter',
+      getProp(form) {
+        const type = form.getValue('component');
+        const proto = { ...componentMap[type] };
+        const props = omitProps(proto.props, [
+          'placeholder',
+          'options',
+          'onChange',
+          'defaultValue',
+          'value',
+        ]);
+        return {
+          title: proto.title + '属性',
+          props,
+        };
+      },
       group: 'basic',
     },
     {

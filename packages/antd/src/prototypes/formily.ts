@@ -37,9 +37,10 @@ export const FormilyForm: ComponentPrototypeType = {
   package: '@music163/antd',
   help: 'Formily 表单',
   hasChildren: true,
-  initChildren: '<FormilyFormItem component="Input" label="表单项" />',
+  initChildren:
+    '<FormilyFormItem name="input1" component="Input" label="表单项" /><FormilyFormItem name="select1" component="Select" label="表单项" />',
   relatedImports: ['FormilyFormItem'],
-  childrenName: ['FormilyFormItem', 'FormilySubmit', 'FormilyReset'],
+  childrenName: ['FormilyFormItem', 'FormilyFormFooter'],
   props: [
     {
       name: 'layout',
@@ -146,6 +147,18 @@ export const FormilyFormItem: ComponentPrototypeType = {
       group: 'basic',
     },
   ],
+};
+
+export const FormilyFormFooter: ComponentPrototypeType = {
+  name: 'FormilyFooter',
+  title: 'Formily操作区',
+  exportType: 'namedExport',
+  icon: 'icon-biaodan',
+  type: 'element',
+  package: '@music163/antd',
+  hasChildren: true,
+  initChildren: `<FormilySubmit>提交</FormilySubmit><FormilyReset>重置</FormilyReset>`,
+  relatedImports: ['FormilySubmit', 'FormilyReset'],
 };
 
 export const FormilySubmit: ComponentPrototypeType = {

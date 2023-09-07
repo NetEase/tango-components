@@ -4,17 +4,12 @@ import { DatePicker as AntdDatePicker } from 'antd';
 import { DatePickerProps as AntdDatePickerProps, RangePickerProps } from 'antd/lib/date-picker';
 import { formatMomentValue, momentable } from '../__builtins__';
 
-type DatePickerProps<PickerProps> = Exclude<PickerProps, 'value' | 'onChange'> & {
-  value: string;
-  onChange: (value: string | string[]) => void;
-};
-
 type ComposedDatePicker = React.FC<React.PropsWithChildren<AntdDatePickerProps>> & {
   RangePicker?: React.FC<React.PropsWithChildren<RangePickerProps>>;
 };
 
 const mapDateFormat = function () {
-  const getDefaultFormat = (props: DatePickerProps<AntdDatePickerProps>) => {
+  const getDefaultFormat = (props: any) => {
     if (props.picker === 'month') {
       return 'YYYY-MM';
     } else if (props.picker === 'quarter') {

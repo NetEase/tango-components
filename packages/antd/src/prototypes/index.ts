@@ -35,6 +35,7 @@ export * from './mentions';
 export * from './menu';
 export * from './modal';
 export * from './page-header';
+export * from './page';
 export * from './pagination';
 export * from './popconfirm';
 export * from './popover';

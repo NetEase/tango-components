@@ -1,4 +1,12 @@
-import { Form, FormItem, FormConsumer, Submit, Reset, createForm } from '@music163/formily';
+import {
+  Form,
+  FormItem,
+  FormFooter,
+  FormConsumer,
+  Submit,
+  Reset,
+  createForm,
+} from '@music163/formily';
 import { Box } from '@music163/foundation';
 
 export default {
@@ -161,10 +169,10 @@ export const Basic = () => {
           </Box>
         )}
       </FormConsumer>
-      <FormItem label=" ">
+      <FormFooter>
         <Submit onSubmit={console.log}>提交</Submit>
         <Reset>重置</Reset>
-      </FormItem>
+      </FormFooter>
     </Form>
   );
 };

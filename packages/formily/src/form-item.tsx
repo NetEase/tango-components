@@ -109,7 +109,7 @@ const formControlStyle = css`
   }
 `;
 
-interface FormItemControlProps {
+export interface FormItemControlProps {
   label?: string;
   extra?: React.ReactNode;
   asterisk?: boolean;
@@ -118,16 +118,14 @@ interface FormItemControlProps {
   children?: React.ReactNode;
 }
 
-function FormItemControl({
+export function FormItemControl({
   label,
   extra,
   asterisk,
   feedbackStatus,
   feedbackText,
   children,
-  ...rest
 }: FormItemControlProps) {
-  console.log(rest);
   const layout = useFormLayout({});
 
   return (

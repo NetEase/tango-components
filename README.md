@@ -1,22 +1,22 @@
-# @music163/formily
+# Components
 
-Formily 适配 Tango 低代码组件包。对 Formily 的用法进行了封装，并扩展了写法，适配网易云音乐低代码搭建体系。
+A react component library for Tango LowCode Builder
 
 ## Develop
 
-install
+install dependencies
 
 ```bash
 yarn
 ```
 
-pre build
+build the packages
 
 ```bash
 yarn build
 ```
 
-run storybook
+run storybook to preview components
 
 ```bash
 yarn start

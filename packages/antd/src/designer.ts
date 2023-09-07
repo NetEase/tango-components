@@ -6,11 +6,11 @@ export const menuData = {
   common: [
     {
       title: '基本',
-      items: ['Button', 'Section'],
+      items: ['Button', 'Section', 'Box', 'Space', 'Typography', 'Title', 'Paragraph'],
     },
     {
       title: '输入',
-      items: ['Input'],
+      items: ['Input', 'InputNumber', 'Select'],
     },
     {
       title: 'Formily表单',

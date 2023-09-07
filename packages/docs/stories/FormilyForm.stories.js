@@ -3,6 +3,7 @@ import {
   FormilyFormItem,
   FormilySubmit,
   FormilyReset,
+  FormilyFormFooter,
   createFormilyForm,
 } from '@music163/antd/lib/esm/designer';
 
@@ -39,10 +40,10 @@ export const Basic = () => {
         }}
         required
       />
-      <FormilyFormItem label=" ">
+      <FormilyFormFooter>
         <FormilySubmit onSubmit={console.log}>提交</FormilySubmit>
         <FormilyReset>重置</FormilyReset>
-      </FormilyFormItem>
+      </FormilyFormFooter>
     </FormilyForm>
   );
 };

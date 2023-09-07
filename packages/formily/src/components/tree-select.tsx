@@ -1,9 +1,11 @@
 import React from 'react';
-import { connect, mapProps } from '@formily/react';
+import { mapProps } from '@formily/react';
 import { TreeSelect as AntdTreeSelect } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import { register } from '../register';
 
-export const TreeSelect = connect(
+export const TreeSelect = register(
+  'TreeSelect',
   AntdTreeSelect,
   mapProps(
     {

@@ -1,7 +1,9 @@
 import { Switch as AntdSwitch } from 'antd';
-import { connect, mapProps } from '@formily/react';
+import { mapProps } from '@formily/react';
+import { register } from '../register';
 
-export const Switch = connect(
+export const Switch = register(
+  'Switch',
   AntdSwitch,
   mapProps(
     {

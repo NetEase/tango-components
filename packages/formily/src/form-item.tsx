@@ -4,30 +4,46 @@ import { css } from 'coral-system';
 import { Field, connect, mapProps } from '@formily/react';
 import { isVoidField } from '@formily/core';
 import { Box } from '@music163/foundation';
-import { componentsMap } from './components';
 import { useFormLayout } from './form-layout';
+import { getComponent } from './register';
 
 export interface FormItemProps {
   label: string;
   name: string;
   component: string | React.ComponentType<any>;
+  componentChildren?: React.ReactNode;
   componentProps?: Record<string, any>;
   required?: boolean;
   initialValue?: any;
 }
 
 export function FormItem(props: FormItemProps) {
-  const { label, component, componentProps = {}, name, ...others } = props;
+  const {
+    label,
+    component: componentProp,
+    componentChildren,
+    componentProps: componentPropsProp = {},
+    name,
+    ...others
+  } = props;
+
+  const component = getComponent(componentProp);
+  const componentProps = {
+    children: componentChildren,
+    ...componentPropsProp,
+  };
+
   if (!name) {
-    return <FormItemControl label={label} {...others} />;
+    return (
+      <FormItemControl label={label} {...others}>
+        {React.createElement(component, componentProps)}
+      </FormItemControl>
+    );
   }
 
   return (
     <Field
-      component={[
-        typeof component === 'string' ? componentsMap[component] : component,
-        componentProps,
-      ]}
+      component={[component, componentProps]}
       decorator={[FormItemDecorator]}
       title={label}
       name={name}
@@ -55,6 +71,7 @@ const FormItemDecorator = connect(
       if (field.validating) return 'pending';
       return field.decoratorProps.feedbackStatus || field.validateStatus;
     };
+
     const takeMessage = () => {
       const split = (messages: any[]) => {
         return messages.reduce((buf, text, index) => {
@@ -101,7 +118,16 @@ const formControlStyle = css`
     row-gap: 8px;
   }
 
+  &.inline {
+    display: inline-flex;
+    align-items: center;
+  }
+
   &.error {
+    .td-formControlFeedbackText {
+      color: red;
+    }
+
     .ant-input-affix-wrapper,
     .ant-input-number {
       border-color: red !important;
@@ -134,7 +160,11 @@ export function FormItemControl({
       mb="12px"
       css={formControlStyle}
     >
-      <Box className="td-formControlLabel" width={layout.labelWidth} textAlign="right">
+      <Box
+        className="td-formControlLabel"
+        width={layout.labelWidth}
+        textAlign={layout.layout === 'vertical' ? undefined : 'right'}
+      >
         {asterisk && (
           <Box as="span" className="td-formControlAsterisk" color="red" mr={4}>
             {'*'}
@@ -143,7 +173,7 @@ export function FormItemControl({
         {label}
       </Box>
       <Box className="td-formControlMain">{children}</Box>
-      {feedbackText && <Box>{feedbackText}</Box>}
+      {feedbackText && <Box className="td-formControlFeedbackText">{feedbackText}</Box>}
       <Box className="td-formControlExtra">{extra}</Box>
     </Box>
   );

@@ -1,9 +1,11 @@
 import React from 'react';
-import { connect, mapProps } from '@formily/react';
+import { mapProps } from '@formily/react';
 import { Select as AntdSelect } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
+import { register } from '../register';
 
-export const Select = connect(
+export const Select = register(
+  'Select',
   AntdSelect,
   mapProps((props, field: any) => {
     return {

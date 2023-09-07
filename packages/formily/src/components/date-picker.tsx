@@ -1,8 +1,9 @@
 import moment from 'moment';
-import { connect, mapProps } from '@formily/react';
+import { mapProps } from '@formily/react';
 import { DatePicker as AntdDatePicker } from 'antd';
 import { DatePickerProps as AntdDatePickerProps, RangePickerProps } from 'antd/lib/date-picker';
 import { formatMomentValue, momentable } from '../__builtins__';
+import { register } from '../register';
 
 type ComposedDatePicker = React.FC<React.PropsWithChildren<AntdDatePickerProps>> & {
   RangePicker?: React.FC<React.PropsWithChildren<RangePickerProps>>;
@@ -37,6 +38,14 @@ const mapDateFormat = function () {
   };
 };
 
-export const DatePicker: ComposedDatePicker = connect(AntdDatePicker, mapProps(mapDateFormat()));
+export const DatePicker: ComposedDatePicker = register(
+  'DatePicker',
+  AntdDatePicker,
+  mapProps(mapDateFormat()),
+);
 
-export const DateRangePicker = connect(AntdDatePicker.RangePicker, mapProps(mapDateFormat()));
+export const DateRangePicker = register(
+  'DateRangePicker',
+  AntdDatePicker.RangePicker,
+  mapProps(mapDateFormat()),
+);

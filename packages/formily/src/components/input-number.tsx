@@ -1,4 +1,4 @@
-import { connect } from '@formily/react';
 import { InputNumber as AntdInputNumber } from 'antd';
+import { register } from '../register';
 
-export const InputNumber = connect(AntdInputNumber);
+export const InputNumber = register('InputNumber',AntdInputNumber);

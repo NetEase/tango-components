@@ -1,8 +1,10 @@
 import React from 'react';
-import { connect, mapProps } from '@formily/react';
+import { mapProps } from '@formily/react';
 import { Input as AntdInput } from 'antd';
+import { register } from '../register';
 
-export const Input = connect(
+export const Input = register(
+  'Input',
   AntdInput,
   mapProps((props, field: any) => ({
     ...props,
@@ -10,4 +12,6 @@ export const Input = connect(
   })),
 );
 
-export const TextArea = connect(AntdInput.TextArea);
+export const TextArea = register('TextArea', AntdInput.TextArea);
+
+export const Password = register('Password', AntdInput.Password);

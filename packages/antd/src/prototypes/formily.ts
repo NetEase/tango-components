@@ -150,7 +150,7 @@ export const FormilyFormItem: ComponentPrototypeType = {
 };
 
 export const FormilyFormFooter: ComponentPrototypeType = {
-  name: 'FormilyFooter',
+  name: 'FormilyFormFooter',
   title: 'Formily操作区',
   exportType: 'namedExport',
   icon: 'icon-biaodan',

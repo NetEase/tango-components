@@ -19,6 +19,37 @@ const form = createForm();
 
 export const Basic = () => {
   return (
+    <Form onFinish={console.log} onFinishFailed={console.log}>
+      <FormItem name="username" label="用户名" component="Input" required />
+      <FormItem name="password" label="密码" component="Password" required />
+      <FormItem name="remember" component="Checkbox" componentChildren="Remember me" />
+      <FormFooter>
+        <Submit>提交</Submit>
+      </FormFooter>
+    </Form>
+  );
+};
+
+export const VerticalLayout = () => {
+  return (
+    <Form layout="vertical">
+      <FormItem label="Field A" component="Input" />
+      <FormItem label="Field B" component="Input" />
+    </Form>
+  );
+};
+
+export const InlineLayout = () => {
+  return (
+    <Form layout="inline">
+      <FormItem label="Field A" component="Input" />
+      <FormItem label="Field B" component="Input" />
+    </Form>
+  );
+};
+
+export const List = () => {
+  return (
     <Form form={form}>
       <FormItem name="switch" label="开关" component="Switch" required />
       <FormItem

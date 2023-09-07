@@ -1,14 +1,4 @@
-import { connect } from '@formily/react';
 import { Radio as AntdRadio } from 'antd';
-import { RadioProps, RadioGroupProps } from 'antd/lib/radio';
+import { register } from '../register';
 
-type ComposedRadio = React.FC<React.PropsWithChildren<RadioProps>> & {
-  Group?: React.FC<React.PropsWithChildren<RadioGroupProps>>;
-  __ANT_RADIO?: boolean;
-};
-
-export const Radio: ComposedRadio = connect(AntdRadio);
-
-Radio.__ANT_RADIO = true;
-
-export const RadioGroup = connect(AntdRadio.Group);
+export const RadioGroup = register('RadioGroup', AntdRadio.Group);

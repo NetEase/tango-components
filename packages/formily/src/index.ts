@@ -1,10 +1,4 @@
-import './components';
-
-export * from './form';
-export * from './form-item';
-export * from './form-footer';
+export * from '@formily/antd';
 export { createForm } from '@formily/core';
-export { FormConsumer } from '@formily/react';
-export * from './reset';
-export * from './submit';
-export * from './register';
+export { Field } from '@formily/react';
+export { FormItem } from './form-item';

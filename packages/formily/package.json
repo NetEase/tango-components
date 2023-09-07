@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "4",
+    "@formily/antd": "^2.2.29",
     "@formily/core": "^2.2.29",
     "@formily/react": "^2.2.29",
     "@music163/foundation": "^0.1.4",

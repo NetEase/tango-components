@@ -1,6 +1,12 @@
 import React from 'react';
 import { withDnd } from '@music163/tango-helpers';
-import { Form, FormItem, FormFooter, Submit, Reset } from '@music163/formily';
+import {
+  FormilyForm as Form,
+  FormilyFormItem as FormItem,
+  FormilyFormFooter as FormFooter,
+  FormilySubmit as Submit,
+  FormilyReset as Reset,
+} from '../components';
 import { ShadowContainer } from './shared';
 
 export const FormilyForm = withDnd({ name: 'FormilyForm' })(({ children }: any) => {

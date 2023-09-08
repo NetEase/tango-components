@@ -192,9 +192,9 @@ export const FormItem: ComponentPrototypeType = {
         { label: '单选框', value: 'RadioGroup' },
         { label: '复选框', value: 'Checkbox' },
         { label: '复选框组', value: 'CheckboxGroup' },
-        { label: '颜色选择', value: 'ColorPicker' },
+        // { label: '颜色选择', value: 'ColorPicker' },
         { label: '下拉选择', value: 'Select' },
-        { label: '级联选择', value: 'Cascader' },
+        // { label: '级联选择', value: 'Cascader' },
         { label: '树形选择', value: 'TreeSelect' },
         // { label: '穿梭选择', value: 'Transfer' },
         { label: '日期选择', value: 'DatePicker' },
@@ -206,10 +206,8 @@ export const FormItem: ComponentPrototypeType = {
         // { label: '周选择', value: 'WeekPicker' },
         // { label: '星级评分', value: 'Rate' },
         // { label: '区间选择', value: 'Slider' },
-        { label: '图片上传', value: 'UploadImage' },
-        { label: '文件上传', value: 'UploadFile' },
-        { label: 'PMS 登录用户选择', value: 'PmsUserSelect' },
-        { label: '公技登录用户选择', value: 'ArchUserSelect' },
+        // { label: '图片上传', value: 'UploadImage' },
+        // { label: '文件上传', value: 'UploadFile' },
       ],
     },
     {
@@ -297,7 +295,5 @@ export const FormFooter: ComponentPrototypeType = {
   hasChildren: true,
   initChildren: '<Button type="primary" htmlType="submit">提交</Button>',
   relatedImports: ['Button'],
-  props: [
-    ...StylePrototypes,
-  ],
+  props: [...StylePrototypes],
 };

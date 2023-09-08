@@ -4,6 +4,7 @@ import { Field, IFieldProps } from '@formily/react';
 
 export interface FormItemProps extends IFormItemProps {
   name?: IFieldProps<any, any>['name'];
+  required?: boolean;
   fieldProps?: IFieldProps<any, any>;
   component?: React.ComponentType<any>;
   componentChildren?: React.ReactNode;
@@ -12,6 +13,7 @@ export interface FormItemProps extends IFormItemProps {
 
 export function FormItem({
   name,
+  required,
   fieldProps,
   component,
   componentChildren,
@@ -30,6 +32,7 @@ export function FormItem({
             ...componentProps,
           },
         ]}
+        required={required}
         {...fieldProps}
       />
     );

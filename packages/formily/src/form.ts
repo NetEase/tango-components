@@ -1,3 +1,11 @@
-// export interface FormProps {}
+import React from 'react';
+import { Form as FormilyForm } from '@formily/antd';
 
-// export function Form(props: FormProps) {}
+export interface FormProps {}
+
+export function Form(props: FormProps) {
+  return React.createElement(FormilyForm, {
+    colon: false,
+    ...props,
+  });
+}

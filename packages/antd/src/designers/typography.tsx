@@ -1,7 +1,7 @@
 import React from 'react';
 import { withDnd } from '@music163/tango-helpers';
+import { Placeholder } from './placeholder';
 import { Typography as BaseTypography } from '../components';
-import { Placeholder } from './shared';
 
 export const Title = withDnd({
   name: 'Title',

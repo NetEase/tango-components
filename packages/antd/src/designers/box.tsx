@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box as BaseBox, BoxProps } from '@music163/foundation';
 import { withDnd } from '@music163/tango-helpers';
-import { Placeholder } from './shared';
+import { Placeholder } from './placeholder';
 
 export const Box: React.ComponentType<BoxProps> = withDnd({
   name: 'Box',

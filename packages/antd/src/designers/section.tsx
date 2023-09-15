@@ -1,6 +1,6 @@
 import React from 'react';
 import { withDnd } from '@music163/tango-helpers';
-import { Placeholder } from './shared';
+import { Placeholder } from './placeholder';
 import { Section as BaseSection, SectionProps } from '../components';
 
 export const Section = withDnd({

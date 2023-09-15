@@ -3,6 +3,7 @@ export * from './formily';
 export * from './input-number';
 export * from './input';
 export * from './layout';
+export * from './placeholder';
 export * from './section';
 export * from './select';
 export * from './space';

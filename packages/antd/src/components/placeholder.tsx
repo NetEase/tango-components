@@ -1,8 +1,6 @@
 import React from 'react';
 import { css } from 'coral-system';
-import { SLOT } from '@music163/tango-helpers';
-import { DispatchButton } from './dispatch-button';
-import { Box, BoxProps } from '../../components';
+import { Box, BoxProps } from '@music163/foundation';
 
 export interface PlaceholderProps extends BoxProps {
   /**
@@ -54,28 +52,12 @@ const sizeMap = {
 export function Placeholder({
   size = 'medium',
   placeholder = '拖拽组件或区块到这里',
-  targetComponentName,
-  buttonText = targetComponentName
-    ? `点击初始化该区域为 ${targetComponentName}`
-    : '点击初始化该区域',
   ...rest
 }: PlaceholderProps) {
   const height = sizeMap[size];
   return (
     <Box className="tango-placeholder" height={height} css={placeholderStyle} {...rest}>
       {placeholder}
-      {targetComponentName && (
-        <DispatchButton
-          type="link"
-          payload={{
-            type: 'replaceNode',
-            targetId: rest[SLOT.dnd],
-            sourceName: targetComponentName,
-          }}
-        >
-          {buttonText}
-        </DispatchButton>
-      )}
     </Box>
   );
 }

@@ -84,6 +84,7 @@ export const FormilyFormItem: ComponentPrototypeType = {
       title: '标签名',
       setter: 'textSetter',
       group: 'basic',
+      initValue: '表单项',
     },
     {
       name: 'name',
@@ -110,6 +111,7 @@ export const FormilyFormItem: ComponentPrototypeType = {
         { label: '级联选择', value: 'Cascader' },
         { label: '树选择', value: 'TreeSelect' },
       ],
+      initValue: 'Input',
       group: 'basic',
     },
     {

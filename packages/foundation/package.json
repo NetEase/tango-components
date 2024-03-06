@@ -34,7 +34,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "@music163/tango-boot": "^0.1.2",
+    "@music163/tango-boot": "^0.2.2",
     "coral-system": "^1.0.6"
   },
   "gitHead": "3ad958237a4a81a2410a9b08abef73a411cc5756"

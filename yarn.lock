@@ -2081,30 +2081,31 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@music163/request@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@music163/request/-/request-0.1.1.tgz#21d2f73689ac977614beee353821f7ce9d432b96"
-  integrity sha512-Kr0HMSY3+GulkS4B23PB1P8Wt33nXStazRDXN1fq+ffBWyM0cz7tL8p+hMYAxRWsMwQvPAW6QTI51yW7lCDLRg==
+"@music163/request@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@music163/request/-/request-0.2.0.tgz#f7114ffa5582939da7996d780052aff34a0406d9"
+  integrity sha512-nCO0gMOaYSEA0fAkvXez9JtEPoZEw3+dJzQGLCwEpL/nV76ouZoOZ+gFCjF6/J2Gh3ZGOqb/8jVaNFVlr3QjRQ==
   dependencies:
     axios "^1.4.0"
 
-"@music163/tango-boot@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.1.2.tgz#41608ce2986bc0f2a7ccd0bc3cbf0f83fc345890"
-  integrity sha512-QTTHdrY7r/ErYRekhykeRN5edtNe1+2MmtaV9GQ5x0807EPRsSsd0hmPH3H85VEp/hY8RMxPPnKqxJAh2y2wyw==
+"@music163/tango-boot@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.2.5.tgz#d876e3ebe47ce698674d075eb6c994c736a2f444"
+  integrity sha512-9SNNzzJSHsXncaenit8+1FG8MqaYtt8osGovVS3oJW1j3CXVHg3x7vSerBQMW4RQK24UEP/pcl7USw1OkcJfMQ==
   dependencies:
-    "@music163/request" "^0.1.1"
+    "@music163/request" "^0.2.0"
+    "@music163/tango-helpers" "^1.0.0-alpha.2"
     "@risingstack/react-easy-state" "^6.3.0"
     "@types/react-router-config" "^5.0.7"
-    history "^5.3.0"
+    history "^4.10.1"
     react-error-boundary "^4.0.11"
     react-router "5"
     react-router-config "5"
 
-"@music163/tango-helpers@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@music163/tango-helpers/-/tango-helpers-0.1.1.tgz#7326eb836c89b798f397861eb778f55890cd5037"
-  integrity sha512-CDvY+1Xa4NaCt51I14m0CBVoqQRG3hM+RY+w8JqxapHRtzWwJEz+naz/FRZcJrIn0RTt4Zmaln/0eqUT2t2Sbw==
+"@music163/tango-helpers@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.npmjs.org/@music163/tango-helpers/-/tango-helpers-1.0.0-alpha.2.tgz#d85f5dee1db9661728c8aaff2bf73195fbfbae8d"
+  integrity sha512-khHH39+uUIHDyPPcmeCBGBqfZzyVNJyerRbY13QaJ8lMA08PFjwi7XZ6klFBn6gR5VtUoU+1JXHEeGkXPQMFng==
   dependencies:
     hoist-non-react-statics "^3.3.2"
     lodash.get "^4.4.2"
@@ -7999,7 +8000,7 @@ he@^1.2.0:
   resolved "https://registry.npmmirror.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
-history@^4.9.0:
+history@^4.10.1, history@^4.9.0:
   version "4.10.1"
   resolved "https://registry.npmmirror.com/history/-/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
   integrity sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==
@@ -8010,13 +8011,6 @@ history@^4.9.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
-
-history@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npmmirror.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
-  integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
-  dependencies:
-    "@babel/runtime" "^7.7.6"
 
 hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"

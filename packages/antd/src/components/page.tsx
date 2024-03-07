@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { css } from 'coral-system';
 import { Box, BoxProps } from '@music163/foundation';
 import { PageHeader, PageHeaderProps } from 'antd';
+import { defineComponent } from '@music163/tango-boot';
 
 const pageStyle = css`
   .td-pageHeader {
@@ -28,7 +29,7 @@ export interface PageProps extends Omit<BoxProps, 'title'> {
   onUnmount?: () => void;
 }
 
-export function Page({
+function View({
   title,
   subTitle,
   headerExtra,
@@ -58,3 +59,5 @@ export function Page({
     </Box>
   );
 }
+
+export const Page = defineComponent(View);

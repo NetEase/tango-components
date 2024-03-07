@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from 'coral-system';
 import { Box, BoxProps } from '@music163/foundation';
+import { defineComponent } from '@music163/tango-boot';
 
 export interface PlaceholderProps extends BoxProps {
   /**
@@ -49,7 +50,7 @@ const sizeMap = {
   large: '80px',
 };
 
-export function Placeholder({
+function PlaceholderView({
   size = 'medium',
   placeholder = '拖拽组件或区块到这里',
   ...rest
@@ -61,3 +62,5 @@ export function Placeholder({
     </Box>
   );
 }
+
+export const Placeholder = defineComponent(PlaceholderView);

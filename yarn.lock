@@ -2088,10 +2088,10 @@
   dependencies:
     axios "^1.4.0"
 
-"@music163/tango-boot@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.2.2.tgz#e9462a7b4a9b2d90e33df66f2541651b4ea33b93"
-  integrity sha512-rexEVDD2rV/mFO4S2poNIMQL+oRpq25hvIiXX9ZIRiF1Gh7BtfXY9TIJ5NrqrNs4fzfCDZDclYmV+O9Y3lR7qw==
+"@music163/tango-boot@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.2.5.tgz#d876e3ebe47ce698674d075eb6c994c736a2f444"
+  integrity sha512-9SNNzzJSHsXncaenit8+1FG8MqaYtt8osGovVS3oJW1j3CXVHg3x7vSerBQMW4RQK24UEP/pcl7USw1OkcJfMQ==
   dependencies:
     "@music163/request" "^0.2.0"
     "@music163/tango-helpers" "^1.0.0-alpha.2"

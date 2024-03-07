@@ -1,12 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import { Box, BoxProps } from '@music163/foundation';
+import { defineComponent } from '@music163/tango-boot';
+import { Placeholder } from './placeholder';
 
 export interface SectionProps extends Omit<BoxProps, 'title'> {
   title?: React.ReactNode;
 }
 
-export function Section({ title, className, children, ...rest }: SectionProps) {
+function SectionView({ title, className, children, ...rest }: SectionProps) {
   return (
     <Box
       as="section"
@@ -24,3 +26,15 @@ export function Section({ title, className, children, ...rest }: SectionProps) {
     </Box>
   );
 }
+
+export const Section = defineComponent(SectionView, {
+  designerConfig: {
+    render({ children, designerProps, originalProps }) {
+      return React.cloneElement(children, {
+        children: <Placeholder />,
+        ...originalProps,
+        ...designerProps,
+      });
+    },
+  },
+});

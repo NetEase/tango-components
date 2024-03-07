@@ -44,6 +44,7 @@
     "tsconfig-paths-webpack-plugin": "^4.1.0"
   },
   "dependencies": {
+    "@music163/tango-boot": "^0.2.5",
     "styled-components": "5"
   }
 }

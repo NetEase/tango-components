@@ -1,24 +1,7 @@
-import React, { forwardRef } from 'react';
-import { Collector } from '@music163/tango-boot';
+import { defineComponent } from '@music163/tango-boot';
 import { InputNumber as AntInputNumber } from 'antd';
-import { mergeRefs } from '@music163/foundation';
 
-export const InputNumber = forwardRef((props, ref) => {
-  return (
-    <Collector
-      {...props}
-      render={({ value, setValue, ref: tangoRef }) => {
-        return (
-          <AntInputNumber
-            ref={mergeRefs(ref, tangoRef)}
-            {...props}
-            value={value}
-            onChange={setValue}
-          />
-        );
-      }}
-    />
-  );
+export const InputNumber = defineComponent(AntInputNumber, {
+  name: 'InputNumber',
+  registerValue: {},
 });
-
-InputNumber.displayName = 'InputNumber';

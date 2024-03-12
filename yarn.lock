@@ -2081,12 +2081,67 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
+"@music163/antd@^0.1.0":
+  version "0.1.8"
+  resolved "https://registry.npmjs.org/@music163/antd/-/antd-0.1.8.tgz#6d8a7d7b67e3614959d61457a7794968d5df81fd"
+  integrity sha512-mHylRuaWb8xGkfEID0ULJAbMEk3xtloNyhomsLBOCh4RWaMMZmWbgB9xy7mUEPIfakZf3qA4BATwBKNCVwDX+w==
+  dependencies:
+    "@music163/formily" "^0.1.8"
+    "@music163/foundation" "^0.1.4"
+    "@music163/tango-boot" "^0.1.2"
+    "@music163/tango-helpers" "^0.1.1"
+    antd "4"
+    classnames "^2.3.2"
+    coral-system "^1.0.6"
+
+"@music163/formily@^0.1.0", "@music163/formily@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.npmjs.org/@music163/formily/-/formily-0.1.8.tgz#db68cd4fc04a24107c0a4035cde489fda8a40d41"
+  integrity sha512-nkv49QNQNFjbqXJpljFKbUO2lz6rZUKE6EM/2syuqmaaYB/9MDBZmex8H3FixjW1oi9Kddi5zKcyClxP5D6htg==
+  dependencies:
+    "@ant-design/icons" "4"
+    "@formily/antd" "^2.2.29"
+    "@formily/core" "^2.2.29"
+    "@formily/react" "^2.2.29"
+    "@music163/foundation" "^0.1.4"
+    antd "4"
+    classnames "^2.3.2"
+    coral-system "^1.0.6"
+
+"@music163/foundation@^0.1.0", "@music163/foundation@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@music163/foundation/-/foundation-0.1.4.tgz#5513ca54f0ea37abdeafe18ee702a7639b75d6dc"
+  integrity sha512-gRUnwveLMswIiCcXtjvJLMj1EYFNkD7B3+6v2A3sWDzcC1mcRWmHNdiLcc5/jJbjtmQrkR6mupiEDt2GSLtIOw==
+  dependencies:
+    "@music163/tango-boot" "^0.1.2"
+    coral-system "^1.0.6"
+
+"@music163/request@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@music163/request/-/request-0.1.2.tgz#cbf6ac18e5d640c8493b6ef467aeeb4584d3d8cc"
+  integrity sha512-zOI0REeABp5qVq7it1KT7fzdEmIkbJpdoitmpXquO0qS7UXtQlh9DDhMT9eXCJ8NDqswGRZir2iHRxHDswwFjA==
+  dependencies:
+    axios "^1.4.0"
+
 "@music163/request@^0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@music163/request/-/request-0.2.0.tgz#f7114ffa5582939da7996d780052aff34a0406d9"
   integrity sha512-nCO0gMOaYSEA0fAkvXez9JtEPoZEw3+dJzQGLCwEpL/nV76ouZoOZ+gFCjF6/J2Gh3ZGOqb/8jVaNFVlr3QjRQ==
   dependencies:
     axios "^1.4.0"
+
+"@music163/tango-boot@^0.1.2":
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.1.4.tgz#8a19a155f86cdf0cddb9e3b50c6bb52bd574497a"
+  integrity sha512-Hk1ClzdjotvWu6CWxdFltymY6AG5qoQaqTaUTwditCT9AEszsFJSgTkURQ02rThNKsO81rNtGEnUxU+SNy9bag==
+  dependencies:
+    "@music163/request" "^0.1.2"
+    "@risingstack/react-easy-state" "^6.3.0"
+    "@types/react-router-config" "^5.0.7"
+    history "^5.3.0"
+    react-error-boundary "^4.0.11"
+    react-router "5"
+    react-router-config "5"
 
 "@music163/tango-boot@^0.2.5":
   version "0.2.5"
@@ -2101,6 +2156,15 @@
     react-error-boundary "^4.0.11"
     react-router "5"
     react-router-config "5"
+
+"@music163/tango-helpers@^0.1.1":
+  version "0.1.8"
+  resolved "https://registry.npmjs.org/@music163/tango-helpers/-/tango-helpers-0.1.8.tgz#158171fa2255814cacb8d91aea48e119915a8421"
+  integrity sha512-fxL7lcrg46trH6HwCg6UyAR2JnCHbmnqsrYr4yZ7duk5O6muPKsw1FXJ32LdlMg1nIYQ9TkkKRO9f78ggRPhBA==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
 
 "@music163/tango-helpers@^1.0.0-alpha.2":
   version "1.0.0-alpha.2"
@@ -8011,6 +8075,13 @@ history@^4.10.1, history@^4.9.0:
     tiny-invariant "^1.0.2"
     tiny-warning "^1.0.0"
     value-equal "^1.0.1"
+
+history@^5.3.0:
+  version "5.3.0"
+  resolved "https://registry.npmmirror.com/history/-/history-5.3.0.tgz#1548abaa245ba47992f063a0783db91ef201c73b"
+  integrity sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
 
 hoist-non-react-statics@^3.0.0, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
   version "3.3.2"

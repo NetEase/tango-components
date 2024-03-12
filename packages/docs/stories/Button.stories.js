@@ -17,6 +17,7 @@ export const Primary = {
   args: {
     type: 'primary',
     children: 'Button',
+    tid: 'button123',
   },
 };
 

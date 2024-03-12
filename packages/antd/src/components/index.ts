@@ -1,4 +1,5 @@
 export * from 'antd';
+export { Button } from './button';
 export {
   Form as FormilyForm,
   FormItem as FormilyFormItem,

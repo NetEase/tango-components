@@ -1,8 +1,10 @@
 import React from 'react';
 import {
+  Form,
+  FormItem,
+  FormFooter,
   Checkbox,
   DatePicker,
-  FormItem,
   Input,
   NumberPicker,
   Password,
@@ -11,7 +13,10 @@ import {
   Switch,
   TimePicker,
   TreeSelect,
+  Submit,
+  Reset,
 } from '@music163/formily';
+import { defineComponent } from '@music163/tango-boot';
 
 const componentMap = new Map();
 const register = (name: string, component: React.ComponentType<any>) => {
@@ -35,18 +40,44 @@ const list: Array<[string, React.ComponentType<any>]> = [
 ];
 list.forEach(([name, component]) => register(name, component));
 
-export function FormilyFormItem({ component, ...rest }: any) {
-  if (typeof component === 'string') {
-    component = componentMap.get(component) ?? 'div';
-  }
-  return <FormItem component={component} {...rest} />;
-}
+export const FormilyFormItem = defineComponent(
+  ({ component, ...rest }: any) => {
+    if (typeof component === 'string') {
+      component = componentMap.get(component) ?? 'div';
+    }
+    return <FormItem component={component} {...rest} />;
+  },
+  {
+    name: 'FormilyFormItem',
+    designerConfig: {
+      hasWrapper: true,
+    },
+  },
+);
+
+export const FormilyForm = defineComponent(Form, {
+  name: 'FormilyForm',
+  designerConfig: {
+    hasWrapper: true,
+  },
+});
+
+export const FormilyFormFooter = defineComponent(FormFooter, {
+  name: 'FormilyFormFooter',
+  designerConfig: {
+    hasWrapper: true,
+  },
+});
+
+export const FormilySubmit = defineComponent(Submit, {
+  name: 'FormilySubmit',
+});
+
+export const FormilyReset = defineComponent(Reset, {
+  name: 'FormilyReset',
+});
 
 export {
-  Form as FormilyForm,
-  FormFooter as FormilyFormFooter,
-  Submit as FormilySubmit,
-  Reset as FormilyReset,
   createForm as createFormilyForm,
   FormConsumer as FormilyFormConsumer,
 } from '@music163/formily';

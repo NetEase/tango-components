@@ -12,11 +12,9 @@ export default {
   tags: ['autodocs'],
 };
 
-// const form = createFormilyForm();
-
 export const Basic = () => {
   return (
-    <FormilyForm>
+    <FormilyForm labelCol={6} wrapperCol={10}>
       <FormilyFormItem
         name="input"
         label="输入框"

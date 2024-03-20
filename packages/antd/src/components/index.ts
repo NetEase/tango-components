@@ -1,15 +1,7 @@
 export * from 'antd';
-export { Button } from './button';
-export {
-  Form as FormilyForm,
-  FormItem as FormilyFormItem,
-  FormFooter as FormilyFormFooter,
-  Submit as FormilySubmit,
-  Reset as FormilyReset,
-  createForm as createFormilyForm,
-  FormConsumer as FormilyFormConsumer,
-} from '@music163/formily';
 export { Box } from './box';
+export { Button } from './button';
+export * from './formily';
 export { InputNumber } from './input-number';
 export { Input, TextArea } from './input';
 export * from './page';

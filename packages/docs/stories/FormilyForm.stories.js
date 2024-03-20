@@ -4,8 +4,7 @@ import {
   FormilySubmit,
   FormilyReset,
   FormilyFormFooter,
-  createFormilyForm,
-} from '@music163/antd/lib/esm/designer';
+} from '@music163/antd';
 
 export default {
   title: 'antd/Formily',
@@ -13,11 +12,11 @@ export default {
   tags: ['autodocs'],
 };
 
-const form = createFormilyForm();
+// const form = createFormilyForm();
 
 export const Basic = () => {
   return (
-    <FormilyForm form={form}>
+    <FormilyForm>
       <FormilyFormItem
         name="input"
         label="输入框"

@@ -1,5 +1,17 @@
 import React from 'react';
-import { Checkbox, DatePicker, FormItem, Input, NumberPicker, Password, Radio, Select, Switch, TimePicker, TreeSelect } from '@music163/formily';
+import {
+  Checkbox,
+  DatePicker,
+  FormItem,
+  Input,
+  NumberPicker,
+  Password,
+  Radio,
+  Select,
+  Switch,
+  TimePicker,
+  TreeSelect,
+} from '@music163/formily';
 
 const componentMap = new Map();
 const register = (name: string, component: React.ComponentType<any>) => {

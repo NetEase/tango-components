@@ -1,0 +1,34 @@
+{
+  "name": "@music163/tango-mail",
+  "version": "0.1.0",
+  "description": "react mail components for tango",
+  "keywords": [
+    "react",
+    "mail",
+    "edm"
+  ],
+  "author": "wwsun <ww.sww@outlook.com>",
+  "homepage": "https://github.com/NetEase/tango-components#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NetEase/tango-components.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@music163/tango-mail.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/NetEase/tango-components/issues"
+  },
+  "dependencies": {
+    "@music163/tango-boot": "^0.2.5",
+    "@react-email/components": "^0.0.15"
+  }
+}

@@ -10,19 +10,29 @@
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/NetEase/tango-components#readme",
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "files": [
+    "dist",
     "lib"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NetEase/tango-components.git"
   },
   "scripts": {
-    "test": "node ./__tests__/@music163/tango-mail.test.js"
+    "clean": "rimraf lib/ && rimraf dist/",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:umd",
+    "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
+    "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
+    "build:umd": "webpack --config webpack.config.js",
+    "serve": "webpack serve --config webpack.config.dev.js",
+    "prepublishOnly": "yarn build"
   },
   "bugs": {
     "url": "https://github.com/NetEase/tango-components/issues"

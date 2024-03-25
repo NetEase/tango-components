@@ -1,4 +1,4 @@
-export { Html, Head, Tailwind } from '@react-email/components';
+export { Html, Head, Body, Tailwind } from '@react-email/components';
 export * from './button';
 export * from './code-block';
 export * from './code-inline';

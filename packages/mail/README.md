@@ -1,11 +1,19 @@
 # `@music163/tango-mail`
 
-> TODO: description
+> A email components library based on React for tango.
 
 ## Usage
 
-```
-const tangoMail = require('@music163/tango-mail');
+```jsx
+import { Html, Button } from '@music163/tango-mail';
 
-// TODO: DEMONSTRATE API
+const Email = () => {
+  return (
+    <Html lang="en" dir="ltr">
+      <Button href="https://example.com" style={{ color: '#61dafb' }}>
+        Click me
+      </Button>
+    </Html>
+  );
+};
 ```

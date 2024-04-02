@@ -1,6 +1,6 @@
 {
   "name": "@music163/formily",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "form components for tango app",
   "keywords": [
     "react"
@@ -38,7 +38,7 @@
     "@formily/antd": "^2.2.29",
     "@formily/core": "^2.2.29",
     "@formily/react": "^2.2.29",
-    "@music163/foundation": "^0.2.0",
+    "@music163/foundation": "^0.2.1",
     "antd": "4",
     "classnames": "^2.3.2",
     "coral-system": "^1.0.6"

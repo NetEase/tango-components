@@ -38,7 +38,7 @@
     "url": "https://github.com/NetEase/tango-components/issues"
   },
   "dependencies": {
-    "@music163/tango-boot": "^0.2.5",
+    "@music163/tango-boot": "^0.3.0",
     "@react-email/components": "^0.0.15"
   }
 }

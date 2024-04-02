@@ -1,4 +1,5 @@
 export * from 'antd';
+export { Columns, Column, Each, Link, Text, When } from '@music163/foundation';
 export { Box } from './box';
 export { Button } from './button';
 export * from './formily';

@@ -5,7 +5,10 @@
   "author": "wwsun <ww.sww@outlook.com>",
   "homepage": "https://github.com/netease/tango-components#readme",
   "license": "MIT",
-  "main": "lib/cjs/index.js",
+  "exports": {
+    ".": "./lib/cjs/index.js",
+    "./designer": "./lib/cjs/designer.js"
+  },
   "module": "lib/esm/index.js",
   "types": "lib/esm/index.d.ts",
   "files": [

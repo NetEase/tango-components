@@ -3026,17 +3026,7 @@
   resolved "https://registry.npmmirror.com/@react-email/preview/-/preview-0.0.8.tgz#f09ca0525e49494450255abbd3a025df310a7bd3"
   integrity sha512-Jm0KUYBZQd2w0s2QRMQy0zfHdo3Ns+9bYSE1OybjknlvhANirjuZw9E5KfWgdzO7PyrRtB1OBOQD8//Obc4uIQ==
 
-"@react-email/render@0.0.12":
-  version "0.0.12"
-  resolved "https://registry.npmmirror.com/@react-email/render/-/render-0.0.12.tgz#66c3217ad2018545da2ba0537d8cfd32316e3da4"
-  integrity sha512-S8WRv/PqECEi6x0QJBj0asnAb5GFtJaHlnByxLETLkgJjc76cxMYDH4r9wdbuJ4sjkcbpwP3LPnVzwS+aIjT7g==
-  dependencies:
-    html-to-text "9.0.5"
-    js-beautify "^1.14.11"
-    react "18.2.0"
-    react-dom "18.2.0"
-
-"@react-email/render@^0.0.12":
+"@react-email/render@0.0.12", "@react-email/render@^0.0.12":
   version "0.0.12"
   resolved "https://registry.npmjs.org/@react-email/render/-/render-0.0.12.tgz#66c3217ad2018545da2ba0537d8cfd32316e3da4"
   integrity sha512-S8WRv/PqECEi6x0QJBj0asnAb5GFtJaHlnByxLETLkgJjc76cxMYDH4r9wdbuJ4sjkcbpwP3LPnVzwS+aIjT7g==

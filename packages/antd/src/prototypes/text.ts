@@ -10,6 +10,7 @@ export const Text: ComponentPrototypeType = {
   package: '@music163/antd',
   help: '原子布局组件，创建一个行内的文本内容。',
   hasChildren: false,
+  initChildren: '文本',
   props: [
     ...StylePrototypes,
     {

@@ -1,4 +1,4 @@
-import { Button } from '@music163/antd';
+import { Button, ButtonGroup, Space } from '@music163/antd';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -33,4 +33,23 @@ export const Small = {
     size: 'small',
     children: 'Button',
   },
+};
+
+export const Group = () => {
+  return (
+    <div>
+      <Space>
+        <Button>button1</Button>
+        <Button>button2</Button>
+        <Button>button3</Button>
+      </Space>
+      <br />
+      <br />
+      <ButtonGroup>
+        <Button>button1</Button>
+        <Button>button2</Button>
+        <Button>button3</Button>
+      </ButtonGroup>
+    </div>
+  );
 };

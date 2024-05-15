@@ -20,12 +20,31 @@ export const Table: ComponentPrototypeType = {
   type: 'element',
   package: '@music163/antd',
   help: '最基本的表格组件，没有过多复杂的功能。',
-  hasChildren: true,
-  childrenName: 'TableColumn',
-  initChildren: '<TableColumn title="列1" /><TableColumn title="列2" /><TableColumn title="列3" />',
-  relatedImports: ['TableColumn', 'Placeholder'],
+  hasChildren: false,
   props: [
     ...StylePrototypes,
+    {
+      name: 'columns',
+      title: '表格列',
+      setter: 'columnSetter',
+      initValue: [
+        {
+          title: '姓名',
+          dataIndex: 'name',
+          key: 'name',
+        },
+        {
+          title: '年龄',
+          dataIndex: 'age',
+          key: 'age',
+        },
+        {
+          title: '住址',
+          dataIndex: 'address',
+          key: 'address',
+        },
+      ],
+    },
     {
       name: 'rowKey',
       title: '数据主键',

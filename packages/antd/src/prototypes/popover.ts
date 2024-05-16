@@ -16,14 +16,14 @@ export const Popover: ComponentPrototypeType = {
       name: 'children',
       title: '内容',
       setter: 'expressionSetter',
-      initValue: '{<Button children="hover button"/>}',
+      initValue: '{{<Button children="hover button"/>}}',
     },
     {
       name: 'content',
       title: '卡片内容',
       tip: '卡片内容',
       setter: 'expressionSetter',
-      initValue: '{<Placeholder text="放置替换" />}',
+      initValue: '{{<Placeholder text="放置替换" />}}',
     },
     {
       name: 'title',

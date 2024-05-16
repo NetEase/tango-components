@@ -16,19 +16,19 @@ export const Comment: ComponentPrototypeType = {
       name: 'content',
       title: '评论的主要内容',
       setter: 'jsxSetter',
-      initValue: '{<Placeholder text="放置替换" />}',
+      initValue: '{{<Placeholder text="放置替换" />}}',
     },
     {
       name: 'author',
       title: '要显示为注释作者的元素',
       setter: 'jsxSetter',
-      initValue: '{<span>多多</span>}',
+      initValue: '{{<span>多多</span>}}',
     },
     {
       name: 'avatar',
       title: '要显示为评论头像的元素',
       setter: 'jsxSetter',
-      initValue: '{<Avatar src="https://joeschmoe.io/api/v1/random" alt="Tango App" />}',
+      initValue: '{{<Avatar src="https://joeschmoe.io/api/v1/random" alt="Tango App" />}}',
     },
     {
       name: 'actions',

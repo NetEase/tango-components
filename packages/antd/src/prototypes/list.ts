@@ -128,7 +128,7 @@ export const ListItemMeta: ComponentPrototypeType = {
       name: 'avatar',
       title: '图标',
       setter: 'expressionSetter',
-      initValue: '{<Avatar src="https://joeschmoe.io/api/v1/random" alt="Tango App" />}',
+      initValue: '{{<Avatar src="https://joeschmoe.io/api/v1/random" alt="Tango App" />}}',
     },
     {
       name: 'description',

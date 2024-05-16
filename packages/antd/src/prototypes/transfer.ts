@@ -74,7 +74,7 @@ export const Transfer: ComponentPrototypeType = {
       name: 'render',
       title: '每行数据渲染函数',
       setter: 'expressionSetter',
-      initValue: `{(item) => item.title}`,
+      initValue: `{{(item) => item.title}}`,
       group: 'advanced',
     },
     {

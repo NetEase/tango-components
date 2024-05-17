@@ -1,5 +1,5 @@
 export * from 'antd';
-export { Columns, Column, Each, Link, Text, When } from '@music163/foundation';
+export { Each, Link, Text, When } from '@music163/foundation';
 export { Box } from './box';
 export { Button } from './button';
 export * from './formily';
@@ -11,3 +11,4 @@ export * from './section';
 export { Select } from './select';
 export { Space } from './space';
 export { Typography, Title, Paragraph } from './typography';
+export { Columns, Column } from './columns'

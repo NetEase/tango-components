@@ -6,7 +6,7 @@ export const menuData = {
   common: [
     {
       title: '基本',
-      items: ['Button', 'Section', 'Box', 'Space', 'Typography', 'Title', 'Paragraph'],
+      items: ['Button', 'Section', 'Box', 'Columns', 'Space', 'Typography', 'Title', 'Paragraph'],
     },
     {
       title: '输入',

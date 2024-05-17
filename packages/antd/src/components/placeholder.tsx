@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'coral-system';
 import { Box, BoxProps } from '@music163/foundation';
 import { defineComponent } from '@music163/tango-boot';
+import { TangoEventButton } from './tango-event-button';
 
 export interface PlaceholderProps extends BoxProps {
   /**
@@ -52,13 +53,13 @@ const sizeMap = {
 
 function PlaceholderView({
   size = 'medium',
-  placeholder = '拖拽组件或区块到这里',
+  placeholder = '点击或拖拽组件/区块到这里',
   ...rest
 }: PlaceholderProps) {
   const height = sizeMap[size];
   return (
     <Box className="tango-placeholder" height={height} css={placeholderStyle} {...rest}>
-      {placeholder}
+      <TangoEventButton type="text" payload={{ type: 'addComponent' }}>{placeholder} </TangoEventButton>
     </Box>
   );
 }

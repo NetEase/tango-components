@@ -30,7 +30,7 @@
     "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:umd",
     "build:esm": "tsc --project tsconfig.prod.json --outDir lib/esm/ --module ES2020",
     "build:cjs": "tsc --project tsconfig.prod.json --outDir lib/cjs/ --module CommonJS",
-    "build:umd": "webpack --config webpack.config.js",
+    "build:umd": "webpack && webpack --env prototype --config webpack.config.js",
     "serve": "webpack serve --config webpack.config.dev.js",
     "prepublishOnly": "yarn build"
   },

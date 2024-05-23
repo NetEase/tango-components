@@ -7,7 +7,7 @@ export * from './container';
 export * from './font';
 export * from './heading';
 export * from './hr';
-export * from './image';
+export * from './img';
 export * from './link';
 export * from './markdown';
 export * from './preview';

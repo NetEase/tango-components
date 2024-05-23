@@ -23,5 +23,10 @@ export const Link: ComponentPrototypeType = {
       title: '目标',
       setter: 'textSetter',
     },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
   ],
 };

@@ -13,5 +13,10 @@ export const Column: ComponentPrototypeType = {
       title: '文案',
       setter: 'textSetter',
     },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
   ],
 };

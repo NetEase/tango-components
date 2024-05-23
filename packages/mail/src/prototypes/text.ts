@@ -11,7 +11,12 @@ export const Text: ComponentPrototypeType = {
       name: 'children',
       title: '文案',
       setter: 'textSetter',
-      initValue: 'Text'
+      initValue: 'Text',
+    },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
     },
   ],
 };

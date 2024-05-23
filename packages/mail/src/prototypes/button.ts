@@ -21,7 +21,7 @@ export const Button: ComponentPrototypeType = {
     {
       name: 'style',
       title: '样式',
-      setter: 'expressionSetter',
+      setter: 'codeSetter',
     },
   ],
 };

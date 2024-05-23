@@ -11,7 +11,7 @@ export const Container: ComponentPrototypeType = {
     {
       name: 'style',
       title: '样式',
-      setter: 'expressionSetter',
+      setter: 'codeSetter',
     },
   ],
 }

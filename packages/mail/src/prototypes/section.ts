@@ -8,5 +8,11 @@ export const Section: ComponentPrototypeType = {
   type: 'container',
   hasChildren: true,
   childrenName: ['Row'],
-  props: [],
+  props: [
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
+  ],
 };

@@ -9,6 +9,7 @@ export * from './heading';
 export * from './hr';
 export * from './img';
 export * from './link';
+export * from './list';
 export * from './markdown';
 export * from './preview';
 export * from './row';

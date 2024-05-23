@@ -8,6 +8,7 @@ export * from './font';
 export * from './heading';
 export * from './img';
 export * from './link';
+export * from './list';
 export * from './row';
 export * from './section';
 export * from './text';

@@ -45,8 +45,6 @@
   },
   "dependencies": {
     "@music163/tango-boot": "^0.3.2",
-    "@react-email/render": "^0.0.13",
-    "styled-components": "5",
-    "tailwindcss": "^3.4.3"
+    "styled-components": "5"
   }
 }

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@music163/tango-boot": "^0.3.2",
-    "@react-email/components": "^0.0.17"
+    "@react-email/components": "^0.0.18",
+    "@react-email/render": "^0.0.14"
   }
 }

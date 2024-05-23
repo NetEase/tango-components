@@ -14,8 +14,8 @@ import {
   Tailwind,
   Column,
   Row,
+  render,
 } from '@music163/tango-mail';
-import { render } from '@react-email/render';
 
 export default {
   title: 'email/Mail',

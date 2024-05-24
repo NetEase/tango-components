@@ -11,4 +11,5 @@ export * from './link';
 export * from './list';
 export * from './row';
 export * from './section';
+export * from './stat';
 export * from './text';

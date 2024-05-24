@@ -2,6 +2,8 @@ import React from 'react';
 import {
   Body,
   Button,
+  Card,
+  Stat,
   Container,
   Heading,
   Html,
@@ -84,16 +86,24 @@ export const ReportMail = () => (
             </Heading>
             <Row>
               <Column>
-                <StatCard label="累计上线页面" value="1,114" />
+                <Card>
+                  <Stat label="累计上线页面" number="1,114" />
+                </Card>
               </Column>
               <Column>
-                <StatCard label="本月上线页面" value="61" />
+                <Card>
+                  <Stat label="本月上线页面" number="61" />
+                </Card>
               </Column>
               <Column>
-                <StatCard label="本月在线提交次数" value="327" />
+                <Card>
+                  <Stat label="本月在线提交次数" number="327" />
+                </Card>
               </Column>
               <Column>
-                <StatCard label="本月在线提交用户" value="36" />
+                <Card>
+                  <Stat label="本月在线提交用户" number="36" />
+                </Card>
               </Column>
             </Row>
             <Button href="https://music-pylon.hz.netease.com/pylon-one/monitor-analysis-system/workspace/287/dashboard/detail/4724">
@@ -145,19 +155,6 @@ export function Mail() {
       >
         render mail
       </button>
-    </div>
-  );
-}
-
-function StatCard({ label = 'label', value = '123' }) {
-  return (
-    <div className="min-w-0 m-1 rounded-md border-solid border border-slate-300 overflow-hidden bg-white">
-      <div className="p-4 flex items-center">
-        <div>
-          <p className="mb-2 text-sm font-medium text-gray-500">{label}</p>
-          <p className="mb-0 text-3xl font-semibold text-gray-700">{value}</p>
-        </div>
-      </div>
     </div>
   );
 }

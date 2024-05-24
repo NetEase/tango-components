@@ -7,12 +7,8 @@ export const Column: ComponentPrototypeType = {
   icon: 'icon-anniu',
   type: 'container',
   hasChildren: true,
+  siblingNames: ['Column'],
   props: [
-    {
-      name: 'children',
-      title: '文案',
-      setter: 'textSetter',
-    },
     {
       name: 'style',
       title: '样式',

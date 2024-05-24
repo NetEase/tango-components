@@ -187,3 +187,14 @@ const footerButton = {
   border: '1px solid #333',
   color: '#333',
 };
+
+export function Layout() {
+  return (
+    <Container>
+      <Row>
+        <Column style={{ background: '#333' }}>1</Column>
+        <Column style={{ background: '#333' }}>2</Column>
+      </Row>
+    </Container>
+  );
+}

@@ -7,6 +7,7 @@ export const Container: ComponentPrototypeType = {
   icon: 'icon-kuangjia',
   help: '容器用于包裹内容',
   type: 'container',
+  hasChildren: true,
   props: [
     {
       name: 'style',
@@ -14,4 +15,4 @@ export const Container: ComponentPrototypeType = {
       setter: 'codeSetter',
     },
   ],
-}
+};

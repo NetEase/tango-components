@@ -8,12 +8,8 @@ export const Row: ComponentPrototypeType = {
   type: 'container',
   hasChildren: true,
   childrenName: ['Column'],
+  initChildren: '<Column></Column><Column></Column>',
   props: [
-    {
-      name: 'children',
-      title: '文案',
-      setter: 'textSetter',
-    },
     {
       name: 'style',
       title: '样式',

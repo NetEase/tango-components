@@ -5,6 +5,7 @@ export const EMail: ComponentPrototypeType = {
   title: '邮件',
   package: '@music163/tango-mail',
   icon: 'icon-edm',
+  hasChildren: true,
   type: 'page',
   props: [
     {

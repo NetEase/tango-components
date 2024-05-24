@@ -9,6 +9,7 @@ export * from './heading';
 export * from './img';
 export * from './link';
 export * from './list';
+export * from './mail';
 export * from './row';
 export * from './section';
 export * from './stat';

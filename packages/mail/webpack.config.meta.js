@@ -6,8 +6,7 @@ module.exports = () => {
     mode: 'development',
     devtool: 'eval-source-map',
     entry: {
-      index: './src/index.ts',
-      designer: './src/designer.ts',
+      prototype: './src/meta.ts',
     },
     module: {
       rules: [
@@ -48,16 +47,11 @@ module.exports = () => {
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
     },
-    externals: {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-      '@music163/tango-boot': 'TangoBoot',
-    },
     output: {
       filename: '[name].js',
       path: path.resolve(__dirname, './dist'),
       publicPath: '', // relative to HTML page (same directory)
-      library: 'TangoMail',
+      library: 'TangoMailPrototype',
       libraryTarget: 'umd',
       umdNamedDefine: true,
     },

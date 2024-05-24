@@ -11,6 +11,7 @@ export * from './hr';
 export * from './img';
 export * from './link';
 export * from './list';
+export * from './mail';
 export * from './markdown';
 export * from './preview';
 export * from './row';

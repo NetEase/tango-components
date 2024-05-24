@@ -83,22 +83,22 @@ export const ReportMail = () => (
         <Row>
           <Column>
             <Card>
-              <Stat label="累计上线页面" number="1,114" />
+              <Stat label="累计上线页面" number="1,114" helpText="环比增加 10%" />
             </Card>
           </Column>
           <Column>
             <Card>
-              <Stat label="本月上线页面" number="61" />
+              <Stat label="本月上线页面" number="61" helpText="环比增加 5%" />
             </Card>
           </Column>
           <Column>
             <Card>
-              <Stat label="本月在线提交次数" number="327" />
+              <Stat label="本月在线提交次数" number="327" helpText="help" />
             </Card>
           </Column>
           <Column>
             <Card>
-              <Stat label="本月在线提交用户" number="36" />
+              <Stat label="本月在线提交用户" number="36" helpText="help" />
             </Card>
           </Column>
         </Row>

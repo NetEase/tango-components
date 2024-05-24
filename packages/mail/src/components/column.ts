@@ -6,7 +6,6 @@ export const Column = defineComponent(Comp, {
   designerConfig: {
     defaultProps: {
       style: {
-        minHeight: 48,
         border: '1px dashed #999',
       },
     },

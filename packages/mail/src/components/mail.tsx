@@ -1,8 +1,21 @@
 import { defineComponent } from '@music163/tango-boot';
-import { Body, Html, Preview, Tailwind, TailwindConfig } from '@react-email/components';
+import {
+  Body,
+  Font,
+  FontProps,
+  Head,
+  Html,
+  Preview,
+  Tailwind,
+  TailwindConfig,
+} from '@react-email/components';
 import React from 'react';
 
 export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
+  /**
+   * 邮件标题
+   */
+  title?: string;
   /**
    * Identify the language of text content on the email
    * @default 'en'
@@ -18,6 +31,10 @@ export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
    */
   preview?: string;
   /**
+   * 字体配置
+   */
+  fontConfig?: FontProps;
+  /**
    * tailwindcss configuration
    */
   tailwindConfig?: TailwindConfig;
@@ -27,10 +44,24 @@ export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
   bg?: string;
 }
 
-function MailView({ lang, dir, preview, tailwindConfig, bg, style, children }: EmailProps) {
+function MailView({
+  lang,
+  dir,
+  title,
+  preview,
+  fontConfig,
+  tailwindConfig,
+  bg,
+  style,
+  children,
+}: EmailProps) {
   return (
     <Html lang={lang} dir={dir}>
       <Preview>{preview}</Preview>
+      <Head>
+        <title>{title}</title>
+        {fontConfig ? <Font {...fontConfig} /> : null}
+      </Head>
       <Tailwind config={tailwindConfig}>
         <Body style={mailBodyStyle({ ...style, bg })}>{children}</Body>
       </Tailwind>
@@ -49,6 +80,7 @@ const mailBodyStyle = (style: React.CSSProperties & { bg?: string }) => {
 export const Email = defineComponent(MailView, {
   name: 'Email',
   designerConfig: {
+    hasWrapper: true,
     draggable: false,
   },
 });

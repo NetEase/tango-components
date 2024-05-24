@@ -4,7 +4,7 @@ export const Link: ComponentPrototypeType = {
   name: 'Link',
   title: '链接',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-link',
   type: 'element',
   props: [
     {
@@ -27,6 +27,11 @@ export const Link: ComponentPrototypeType = {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

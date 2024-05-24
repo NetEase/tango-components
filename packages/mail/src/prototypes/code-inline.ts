@@ -4,18 +4,14 @@ export const CodeInline: ComponentPrototypeType = {
   name: 'CodeInline',
   title: '代码',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-code',
   type: 'element',
   props: [
     {
       name: 'children',
       title: '内容',
-      setter: 'textSetter',
-    },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
+      setter: 'textAreaSetter',
+      initValue: 'NetEase/tango',
     },
   ],
 };

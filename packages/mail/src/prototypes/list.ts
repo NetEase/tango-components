@@ -4,7 +4,7 @@ export const List: ComponentPrototypeType = {
   name: 'List',
   title: '列表',
   package: '@music163/tango-mail',
-  icon: 'icon-liebiao',
+  icon: 'icon-list',
   type: 'element',
   hasChildren: true,
   childrenName: ['ListItem'],
@@ -17,6 +17,11 @@ export const List: ComponentPrototypeType = {
       title: '样式',
       setter: 'codeSetter',
     },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
+    },
   ],
 };
 
@@ -24,7 +29,7 @@ export const ListItem: ComponentPrototypeType = {
   name: 'ListItem',
   title: '列表项',
   package: '@music163/tango-mail',
-  icon: 'icon-liebiao',
+  icon: 'icon-list',
   type: 'element',
   siblingNames: ['ListItem'],
   props: [
@@ -37,6 +42,11 @@ export const ListItem: ComponentPrototypeType = {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

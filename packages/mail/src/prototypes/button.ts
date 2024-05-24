@@ -17,11 +17,17 @@ export const Button: ComponentPrototypeType = {
       name: 'children',
       title: '文案',
       setter: 'textSetter',
+      initValue: '按钮',
     },
     {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

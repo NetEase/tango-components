@@ -4,13 +4,13 @@ export const Heading: ComponentPrototypeType = {
   name: 'Heading',
   title: '标题',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-header',
   type: 'element',
   props: [
     {
       name: 'children',
       title: '文案',
-      setter: 'textSetter',
+      setter: 'textAreaSetter',
       initValue: 'Heading',
     },
     {
@@ -30,6 +30,11 @@ export const Heading: ComponentPrototypeType = {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

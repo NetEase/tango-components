@@ -11,6 +11,11 @@ export const CodeInline: ComponentPrototypeType = {
       name: 'children',
       title: '内容',
       setter: 'textSetter',
-    }
+    },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
   ],
 };

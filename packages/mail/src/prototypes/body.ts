@@ -10,7 +10,7 @@ export const Body: ComponentPrototypeType = {
     {
       name: 'style',
       title: '样式',
-      setter: 'expressionSetter',
+      setter: 'codeSetter',
     },
   ],
 };

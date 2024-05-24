@@ -4,7 +4,24 @@ export const menuData = {
   common: [
     {
       title: '常用',
-      items: ['Section', 'Row', 'Column', 'Heading', 'Link', 'Text', 'Image', 'Button', 'Font'],
+      items: [
+        'Heading',
+        'Link',
+        'Text',
+        'Img',
+        'Button',
+        'Font',
+        'Card',
+        'CodeBlock',
+        'CodeInline',
+        'Hr',
+        'Markdown',
+        'Stat',
+      ],
+    },
+    {
+      title: '布局',
+      items: ['Columns2', 'Columns3', 'Row', 'Column', 'Section'],
     },
   ],
 };

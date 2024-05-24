@@ -7,6 +7,11 @@ export const Section: ComponentPrototypeType = {
   icon: 'icon-section',
   type: 'container',
   hasChildren: true,
-  childrenName: ['Row'],
-  props: [],
+  props: [
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
+  ],
 };

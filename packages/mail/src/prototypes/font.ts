@@ -28,5 +28,10 @@ export const Font: ComponentPrototypeType = {
         },
       ]
     },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
   ],
 };

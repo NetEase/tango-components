@@ -23,5 +23,10 @@ export const CodeBlock: ComponentPrototypeType = {
       setter: 'textSetter',
       tip: '语言列表参考 Prism.js',
     },
+    {
+      name: 'style',
+      title: '样式',
+      setter: 'codeSetter',
+    },
   ],
 };

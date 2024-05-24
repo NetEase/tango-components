@@ -1,26 +1,25 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 
-export const Link: ComponentPrototypeType = {
-  name: 'Link',
-  title: '链接',
+export const Stat: ComponentPrototypeType = {
+  name: 'Stat',
+  title: '统计',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-stat',
   type: 'element',
   props: [
     {
-      name: 'children',
-      title: '文案',
-      setter: 'textSetter',
-      initValue: 'Link'
-    },
-    {
-      name: 'href',
-      title: '链接地址',
+      name: 'label',
+      title: '标签',
       setter: 'textSetter',
     },
     {
-      name: 'target',
-      title: '目标',
+      name: 'number',
+      title: '指标数值',
+      setter: 'textSetter',
+    },
+    {
+      name: 'helpText',
+      title: '辅助文本',
       setter: 'textSetter',
     },
     {

@@ -14,6 +14,8 @@ import {
   ListItem,
   EMail,
   render,
+  Html,
+  Markdown,
 } from '@music163/tango-mail';
 
 export default {
@@ -198,3 +200,23 @@ export function Layout() {
     </Container>
   );
 }
+
+export const MarkdownEmail = () => {
+  return (
+    <Html lang="en" dir="ltr">
+      <Markdown
+        markdownCustomStyles={{
+          h1: { color: 'red' },
+          h2: { color: 'blue' },
+          codeInline: { background: 'grey' },
+        }}
+        markdownContainerStyles={{
+          padding: '12px',
+          border: 'solid 1px black',
+        }}
+      >{`# Hello, World!`}</Markdown>
+      {/* OR */}
+      <Markdown children={`# This is a ~~strikethrough~~`} />
+    </Html>
+  );
+};

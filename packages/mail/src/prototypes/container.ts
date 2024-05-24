@@ -4,7 +4,7 @@ export const Container: ComponentPrototypeType = {
   name: 'Container',
   title: '容器',
   package: '@music163/tango-mail',
-  icon: 'icon-kuangjia',
+  icon: 'icon-container',
   help: '容器用于包裹内容',
   type: 'container',
   hasChildren: true,

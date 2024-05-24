@@ -10,6 +10,7 @@ export * from './img';
 export * from './link';
 export * from './list';
 export * from './mail';
+export * from './markdown';
 export * from './row';
 export * from './section';
 export * from './stat';

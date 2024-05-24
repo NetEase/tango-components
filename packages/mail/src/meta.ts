@@ -10,7 +10,6 @@ export const menuData = {
         'Text',
         'Img',
         'Button',
-        'Font',
         'Card',
         'CodeBlock',
         'CodeInline',

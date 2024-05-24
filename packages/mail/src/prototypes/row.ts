@@ -4,7 +4,7 @@ export const Row: ComponentPrototypeType = {
   name: 'Row',
   title: '代码块',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-row',
   type: 'container',
   hasChildren: true,
   childrenName: ['Column'],

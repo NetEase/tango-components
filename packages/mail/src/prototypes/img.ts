@@ -4,7 +4,7 @@ export const Img: ComponentPrototypeType = {
   name: 'Img',
   title: '图片',
   package: '@music163/tango-mail',
-  icon: 'icon-image',
+  icon: 'icon-tupian',
   type: 'element',
   props: [
     {

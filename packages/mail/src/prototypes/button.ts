@@ -17,6 +17,7 @@ export const Button: ComponentPrototypeType = {
       name: 'children',
       title: '文案',
       setter: 'textSetter',
+      initValue: '按钮',
     },
     {
       name: 'style',

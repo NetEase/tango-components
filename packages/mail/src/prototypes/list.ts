@@ -4,7 +4,7 @@ export const List: ComponentPrototypeType = {
   name: 'List',
   title: '列表',
   package: '@music163/tango-mail',
-  icon: 'icon-liebiao',
+  icon: 'icon-list',
   type: 'element',
   hasChildren: true,
   childrenName: ['ListItem'],
@@ -24,7 +24,7 @@ export const ListItem: ComponentPrototypeType = {
   name: 'ListItem',
   title: '列表项',
   package: '@music163/tango-mail',
-  icon: 'icon-liebiao',
+  icon: 'icon-list',
   type: 'element',
   siblingNames: ['ListItem'],
   props: [

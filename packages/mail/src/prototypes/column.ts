@@ -4,7 +4,7 @@ export const Column: ComponentPrototypeType = {
   name: 'Column',
   title: '代码块',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-columns',
   type: 'container',
   hasChildren: true,
   siblingNames: ['Column'],

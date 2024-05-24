@@ -4,13 +4,13 @@ export const CodeBlock: ComponentPrototypeType = {
   name: 'CodeBlock',
   title: '代码块',
   package: '@music163/tango-mail',
-  icon: 'icon-anniu',
+  icon: 'icon-code',
   type: 'element',
   props: [
     {
       name: 'children',
       title: '内容',
-      setter: 'textSetter',
+      setter: 'textAreaSetter',
     },
     {
       name: 'lineNumbers',

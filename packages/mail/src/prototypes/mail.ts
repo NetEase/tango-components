@@ -1,7 +1,7 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 
-export const EMail: ComponentPrototypeType = {
-  name: 'EMail',
+export const Email: ComponentPrototypeType = {
+  name: 'Email',
   title: '邮件',
   package: '@music163/tango-mail',
   icon: 'icon-edm',

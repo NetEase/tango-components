@@ -12,7 +12,7 @@ import {
   Row,
   List,
   ListItem,
-  EMail,
+  Email,
   render,
   Html,
   Markdown,
@@ -32,7 +32,7 @@ const sectionPart = {
 };
 
 export const ReportMail = () => (
-  <EMail bg="#f3f3f5" preview="tango month report">
+  <Email bg="#f3f3f5" preview="tango month report">
     <Container
       style={{
         width: 648,
@@ -135,7 +135,7 @@ export const ReportMail = () => (
         此邮件使用 <strong>Tango</strong> 搭建, 网易云音乐-技术中心-公共技术团队
       </Text>
     </Section>
-  </EMail>
+  </Email>
 );
 
 export function Mail() {

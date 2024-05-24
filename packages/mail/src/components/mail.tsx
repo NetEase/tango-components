@@ -2,7 +2,7 @@ import { defineComponent } from '@music163/tango-boot';
 import { Body, Html, Preview, Tailwind, TailwindConfig } from '@react-email/components';
 import React from 'react';
 
-export interface EMailProps extends React.ComponentPropsWithoutRef<'div'> {
+export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
   /**
    * Identify the language of text content on the email
    * @default 'en'
@@ -27,7 +27,7 @@ export interface EMailProps extends React.ComponentPropsWithoutRef<'div'> {
   bg?: string;
 }
 
-function MailView({ lang, dir, preview, tailwindConfig, bg, style, children }: EMailProps) {
+function MailView({ lang, dir, preview, tailwindConfig, bg, style, children }: EmailProps) {
   return (
     <Html lang={lang} dir={dir}>
       <Preview>{preview}</Preview>
@@ -46,8 +46,8 @@ const mailBodyStyle = (style: React.CSSProperties & { bg?: string }) => {
   };
 };
 
-export const EMail = defineComponent(MailView, {
-  name: 'EMail',
+export const Email = defineComponent(MailView, {
+  name: 'Email',
   designerConfig: {
     draggable: false,
   },

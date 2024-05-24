@@ -31,5 +31,10 @@ export const Heading: ComponentPrototypeType = {
       title: '样式',
       setter: 'codeSetter',
     },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
+    },
   ],
 };

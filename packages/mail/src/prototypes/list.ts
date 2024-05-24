@@ -17,6 +17,11 @@ export const List: ComponentPrototypeType = {
       title: '样式',
       setter: 'codeSetter',
     },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
+    },
   ],
 };
 
@@ -37,6 +42,11 @@ export const ListItem: ComponentPrototypeType = {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

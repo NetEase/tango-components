@@ -11,6 +11,7 @@ export const Img: ComponentPrototypeType = {
       name: 'src',
       title: '图片地址',
       setter: 'textSetter',
+      initValue: 'https://via.placeholder.com/200',
     },
     {
       name: 'width',
@@ -31,6 +32,11 @@ export const Img: ComponentPrototypeType = {
       name: 'style',
       title: '样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: '类名',
+      setter: 'textSetter',
     },
   ],
 };

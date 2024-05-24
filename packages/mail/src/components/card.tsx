@@ -1,5 +1,6 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
+import { Placeholder } from './placeholder';
 
 export type CardProps = React.ComponentPropsWithoutRef<'div'>;
 
@@ -17,4 +18,9 @@ function CardView({ className, style, children, ...props }: CardProps) {
 
 export const Card = defineComponent(CardView, {
   name: 'Card',
+  designerConfig: {
+    defaultProps: {
+      children: <Placeholder text="拖拽内容到此处" />,
+    },
+  },
 });

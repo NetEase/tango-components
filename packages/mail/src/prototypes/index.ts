@@ -1,5 +1,6 @@
 export * from './body';
 export * from './button';
+export * from './card';
 export * from './code-block';
 export * from './code-inline';
 export * from './column';

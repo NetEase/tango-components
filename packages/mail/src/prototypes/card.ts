@@ -1,18 +1,13 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 
-export const Text: ComponentPrototypeType = {
-  name: 'Text',
-  title: '文本',
+export const Card: ComponentPrototypeType = {
+  name: 'Card',
+  title: '卡片',
   package: '@music163/tango-mail',
-  icon: 'icon-text',
+  icon: 'icon-card',
   type: 'element',
+  hasChildren: true,
   props: [
-    {
-      name: 'children',
-      title: '文案',
-      setter: 'textAreaSetter',
-      initValue: 'Text',
-    },
     {
       name: 'style',
       title: '样式',

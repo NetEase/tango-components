@@ -8,25 +8,24 @@ export const CodeBlock: ComponentPrototypeType = {
   type: 'element',
   props: [
     {
-      name: 'children',
-      title: '内容',
-      setter: 'textAreaSetter',
+      name: 'code',
+      title: '代码',
+      setter: 'codeSetter',
+      initValue: "export foo = 'foo';",
     },
     {
       name: 'lineNumbers',
       title: '展示行号',
       setter: 'boolSetter',
+      initValue: true,
     },
     {
       name: 'language',
       title: '语言',
       setter: 'textSetter',
+      initValue: 'javascript',
       tip: '语言列表参考 Prism.js',
-    },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
+      docs: 'https://prismjs.com/#supported-languages',
     },
   ],
 };

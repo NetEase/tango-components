@@ -11,7 +11,7 @@ export const menuData = {
         'Img',
         'Button',
         'Card',
-        'CodeBlock',
+        // 'CodeBlock',
         'CodeInline',
         'Hr',
         'Markdown',

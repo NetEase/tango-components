@@ -5,6 +5,7 @@ export { Button, ButtonGroup } from './button';
 export * from './formily';
 export { InputNumber } from './input-number';
 export { Input, TextArea } from './input';
+export { Modal } from './modal';
 export * from './page';
 export * from './placeholder';
 export * from './section';

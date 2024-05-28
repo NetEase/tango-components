@@ -3059,10 +3059,10 @@
     react-router "5"
     react-router-config "5"
 
-"@music163/tango-boot@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.3.2.tgz#a3542cbfb890d0c5c2ff6782a937e2a9270ff2d1"
-  integrity sha512-epy5sGEpe9DyoHOXOxCV7j1w2/eURdGMSbx40aN5vc43M7js/9tnWB1ZAIfdBGbAS3DRR87tQ0wDgiZjddxR2g==
+"@music163/tango-boot@^0.3.3":
+  version "0.3.3"
+  resolved "https://registry.npmjs.org/@music163/tango-boot/-/tango-boot-0.3.3.tgz#6102244750d3fc17d4e32413788e0a1a8412eee3"
+  integrity sha512-hPkvDAsCoaOiWOd/QKS14UERXjNaQcSq/DSqr5gNhT426wvnrnDFz8jAJtUPEu/SnFrRg+I6sB3OD0d1jmxw1g==
   dependencies:
     "@music163/request" "^0.2.0"
     "@music163/tango-helpers" "^1.0.0-alpha.5"

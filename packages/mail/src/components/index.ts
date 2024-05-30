@@ -1,4 +1,5 @@
 export { Html, Head, Body, Tailwind } from '@react-email/components';
+export * from './box';
 export * from './button';
 export * from './card';
 export * from './code-block';

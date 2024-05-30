@@ -5,5 +5,5 @@ export const Container = defineComponent(Comp, {
   name: 'Container',
   designerConfig: {
     draggable: false,
-  }
+  },
 });

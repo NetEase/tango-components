@@ -9,5 +9,6 @@ export const Container: ComponentPrototypeType = {
   help: '容器用于包裹内容',
   type: 'container',
   hasChildren: true,
+  childrenName: ['Section', 'Hr'],
   props: [...STYLE_PROPS],
 };

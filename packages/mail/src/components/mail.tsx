@@ -63,7 +63,9 @@ function MailView({
         {fontConfig ? <Font {...fontConfig} /> : null}
       </Head>
       <Tailwind config={tailwindConfig}>
-        <Body style={mailBodyStyle({ ...style, bg })}>{children}</Body>
+        <Body className="TangoMailBody" style={mailBodyStyle({ ...style, bg })}>
+          {children}
+        </Body>
       </Tailwind>
     </Html>
   );

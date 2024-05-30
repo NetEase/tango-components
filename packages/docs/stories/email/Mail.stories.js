@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  Box,
   Button,
   Card,
   Stat,
@@ -41,9 +42,8 @@ export const ReportMail = () => (
         backgroundColor: '#ffffff',
       }}
     >
-      <Section
+      <Box
         style={{
-          display: 'flex',
           padding: '24px',
           backgroundColor: '#003CA9',
           color: '#FFF',
@@ -75,7 +75,7 @@ export const ReportMail = () => (
         <Button style={button} href="https://netease.github.io/tango-site/">
           使用指南
         </Button>
-      </Section>
+      </Box>
       <Section style={sectionPart}>
         <Heading as="h2" style={title}>
           接入数据
@@ -127,14 +127,14 @@ export const ReportMail = () => (
         </List>
       </Section>
     </Container>
-    <Section style={footer}>
+    <Box style={footer}>
       <Text>
         <Button style={footerButton}>🏅Tango金牌服务群：7788-7788</Button>
       </Text>
       <Text style={footerAddress}>
         此邮件使用 <strong>Tango</strong> 搭建, 网易云音乐-技术中心-公共技术团队
       </Text>
-    </Section>
+    </Box>
   </Email>
 );
 

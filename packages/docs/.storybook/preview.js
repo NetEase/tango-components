@@ -14,38 +14,8 @@ const preview = {
   },
 };
 
-export const globalTypes = {
-  renderMode: {
-    name: 'Render Mode',
-    description: '渲染模式',
-    defaultValue: 'Normal',
-    toolbar: {
-      icon: 'paintbrush',
-      title: 'Mode',
-      items: ['Normal', 'Design'],
-      dynamicTitle: true,
-    },
-  },
+window.__TANGO_DESIGNER__ = {
+  version: '1.0.0',
 };
-
-export const decorators = [
-  (Story, context) => {
-    const mode = context.globals.renderMode;
-    useEffect(() => {
-      if (mode === 'Design') {
-        window.__TANGO_DESIGNER__ = {
-          version: '1.0.0',
-        };
-      } else {
-        delete window.__TANGO_DESIGNER__;
-      }
-      return () => {
-        delete window.__TANGO_DESIGNER__;
-      };
-    }, [mode]);
-
-    return <Story />;
-  },
-];
 
 export default preview;

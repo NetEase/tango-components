@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Card: ComponentPrototypeType = {
   name: 'Card',
@@ -7,16 +8,5 @@ export const Card: ComponentPrototypeType = {
   icon: 'icon-card',
   type: 'element',
   hasChildren: true,
-  props: [
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
-  ],
+  props: [...STYLE_PROPS],
 };

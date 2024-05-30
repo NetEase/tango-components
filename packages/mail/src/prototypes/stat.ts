@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Stat: ComponentPrototypeType = {
   name: 'Stat',
@@ -25,15 +26,6 @@ export const Stat: ComponentPrototypeType = {
       setter: 'textSetter',
       initValue: '下降 5%',
     },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
+    ...STYLE_PROPS,
   ],
 };

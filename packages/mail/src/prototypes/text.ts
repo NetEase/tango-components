@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Text: ComponentPrototypeType = {
   name: 'Text',
@@ -13,15 +14,6 @@ export const Text: ComponentPrototypeType = {
       setter: 'textAreaSetter',
       initValue: 'Text',
     },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
+    ...STYLE_PROPS,
   ],
 };

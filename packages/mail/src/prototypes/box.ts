@@ -1,13 +1,12 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
 import { STYLE_PROPS } from '../helpers';
 
-export const Container: ComponentPrototypeType = {
-  name: 'Container',
-  title: '容器',
+export const Box: ComponentPrototypeType = {
+  name: 'Box',
+  title: '盒子',
   package: '@music163/tango-mail',
-  icon: 'icon-container',
-  help: '容器用于包裹内容',
-  type: 'container',
+  icon: 'icon-box',
+  type: 'element',
   hasChildren: true,
   props: [...STYLE_PROPS],
 };

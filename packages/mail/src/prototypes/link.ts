@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Link: ComponentPrototypeType = {
   name: 'Link',
@@ -11,7 +12,7 @@ export const Link: ComponentPrototypeType = {
       name: 'children',
       title: '文案',
       setter: 'textSetter',
-      initValue: 'Link'
+      initValue: 'Link',
     },
     {
       name: 'href',
@@ -23,15 +24,6 @@ export const Link: ComponentPrototypeType = {
       title: '目标',
       setter: 'textSetter',
     },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
+    ...STYLE_PROPS,
   ],
 };

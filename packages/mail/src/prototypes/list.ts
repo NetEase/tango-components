@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const List: ComponentPrototypeType = {
   name: 'List',
@@ -11,18 +12,7 @@ export const List: ComponentPrototypeType = {
   initChildren:
     '<ListItem text="list item" /><ListItem text="list item" /><ListItem text="list item" />',
   relatedImports: ['ListItem'],
-  props: [
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
-  ],
+  props: [...STYLE_PROPS],
 };
 
 export const ListItem: ComponentPrototypeType = {

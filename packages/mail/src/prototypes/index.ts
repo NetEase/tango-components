@@ -1,4 +1,5 @@
 export * from './body';
+export * from './box';
 export * from './button';
 export * from './card';
 export * from './code-block';

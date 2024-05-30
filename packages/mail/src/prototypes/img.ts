@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Img: ComponentPrototypeType = {
   name: 'Img',
@@ -28,15 +29,6 @@ export const Img: ComponentPrototypeType = {
       title: '替代文案',
       setter: 'textSetter',
     },
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
+    ...STYLE_PROPS,
   ],
 };

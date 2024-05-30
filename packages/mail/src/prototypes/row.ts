@@ -1,4 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../helpers';
 
 export const Row: ComponentPrototypeType = {
   name: 'Row',
@@ -10,18 +11,7 @@ export const Row: ComponentPrototypeType = {
   childrenName: ['Column'],
   initChildren: '<Column><Section></Section></Column><Column><Section></Section></Column>',
   relatedImports: ['Column', 'Section'],
-  props: [
-    {
-      name: 'style',
-      title: '样式',
-      setter: 'codeSetter',
-    },
-    {
-      name: 'className',
-      title: '类名',
-      setter: 'textSetter',
-    },
-  ],
+  props: [...STYLE_PROPS],
 };
 
 export const Columns2: ComponentPrototypeType = {

@@ -3100,6 +3100,15 @@
     lodash.get "^4.4.2"
     lodash.set "^4.3.2"
 
+"@music163/tango-helpers@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@music163/tango-helpers/-/tango-helpers-1.1.1.tgz#e31ec53b3b0fe58beccd9087c3e35bfc63b539fc"
+  integrity sha512-ep6SpYgwpSBmhNesmSm7H9tiB9B19pCb+T5saaoFaN22TlGc0zxl7ZejwlIJuqaK99zRPOzSb14aDknZtKYR9Q==
+  dependencies:
+    hoist-non-react-statics "^3.3.2"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
+
 "@ndelangen/get-tarball@^3.0.7":
   version "3.0.9"
   resolved "https://registry.npmmirror.com/@ndelangen/get-tarball/-/get-tarball-3.0.9.tgz#727ff4454e65f34707e742a59e5e6b1f525d8964"

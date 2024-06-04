@@ -26,7 +26,7 @@ export const ListItem: ComponentPrototypeType = {
     {
       name: 'text',
       title: '文案',
-      setter: 'textSetter',
+      setter: 'textAreaSetter',
     },
     {
       name: 'style',

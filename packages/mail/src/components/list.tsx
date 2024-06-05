@@ -1,12 +1,17 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
+import cx from 'classnames';
 import { Placeholder } from './placeholder';
 
 export type ListProps = React.ComponentPropsWithoutRef<'ul'>;
 
-export function ListView({ children, style, ...props }: ListProps) {
+export function ListView({ children, style, className, ...props }: ListProps) {
   return (
-    <ul {...props} style={listStyle(style)}>
+    <ul
+      {...props}
+      className={cx('m-0 p-0 list-disc list-inside text-slate-900', className)}
+      style={listStyle(style)}
+    >
       {children}
     </ul>
   );
@@ -14,9 +19,6 @@ export function ListView({ children, style, ...props }: ListProps) {
 
 const listStyle = (style?: React.CSSProperties) => {
   return {
-    margin: 0,
-    padding: 0,
-    listStyle: 'none',
     ...style,
   };
 };
@@ -36,8 +38,7 @@ export type ListItemProps = React.ComponentPropsWithoutRef<'li'> & {
 
 export function ListItemView({ text, children, style, ...props }: ListItemProps) {
   return (
-    <li {...props} className="text-body-color flex text-base" style={listItemStyle(style)}>
-      <span className="bg-gray-600 mr-2 mt-2 flex h-2 w-full max-w-[8px] items-center justify-center rounded-full text-base" />
+    <li {...props} style={listItemStyle(style)}>
       {text || children}
     </li>
   );

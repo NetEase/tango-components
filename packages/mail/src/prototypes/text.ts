@@ -14,6 +14,11 @@ export const Text: ComponentPrototypeType = {
       setter: 'textAreaSetter',
       initValue: 'Text',
     },
+    {
+      name: 'isTruncate',
+      title: '避免文本换行',
+      setter: 'boolSetter',
+    },
     ...STYLE_PROPS,
   ],
 };

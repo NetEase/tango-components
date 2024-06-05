@@ -36,7 +36,7 @@ export const ReportMail = () => (
   <Email bg="#f3f3f5" preview="tango month report">
     <Container
       style={{
-        width: 648,
+        width: 750,
         maxWidth: '100%',
         margin: '0 auto',
         backgroundColor: '#ffffff',
@@ -105,10 +105,6 @@ export const ReportMail = () => (
         <Button href="https://music-pylon.hz.netease.com/pylon-one/monitor-analysis-system/workspace/287/dashboard/detail/4724">
           🌐 查看详细数据
         </Button>
-        <Img
-          width={600}
-          src="https://p6.music.126.net/obj/wonDlsKUwrLClGjCm8Kx/35759522799/2eb3/c7af/a59e/d729e1a4967086ae7f9feaf5253de007.png"
-        />
         <Heading as="h3">本月进展</Heading>
         <List>
           <ListItem>
@@ -131,9 +127,7 @@ export const ReportMail = () => (
       <Text>
         <Button style={footerButton}>🏅Tango金牌服务群：7788-7788</Button>
       </Text>
-      <Text style={footerAddress}>
-        此邮件使用 <strong>Tango</strong> 搭建, 网易云音乐-技术中心-公共技术团队
-      </Text>
+      <Text style={footerAddress}>此邮件使用 Tango 搭建, 网易云音乐-技术中心-公共技术团队</Text>
     </Box>
   </Email>
 );

@@ -26,31 +26,15 @@ export default {
   },
 };
 
-const sectionPart = {
-  display: 'flex',
-  flexDirection: 'column',
-  padding: '24px',
-};
-
 export const ReportMail = () => (
   <Email bg="#333" preview="tango month report">
     <Container
       style={{
-        width: 200,
-        maxWidth: 200,
-        // maxWidth: '100%',
-        // margin: '0 auto',
+        width: 650,
         backgroundColor: '#ffffff',
       }}
-      className="my-0 mx-auto w-[200px]"
     >
-      <Box
-        style={{
-          padding: '24px',
-          backgroundColor: '#003CA9',
-          color: '#FFF',
-        }}
-      >
+      <Section p="24px" bg="#003CA9" color="#FFF">
         <Img
           width={146}
           src="https://p5.music.126.net/obj/wonDlsKUwrLClGjCm8Kx/27987959536/68ce/da54/30a8/53000b894469c6d0a5996ca49d2ad89e.png"
@@ -71,18 +55,21 @@ export const ReportMail = () => (
           Tango
           是云音乐低代码解决方案，使命是让开发者使用低代码工具实现业务交付过程的自动化和智能化，持续降低业务交付门槛，提升开发交付效能。
         </Text>
-        <Button style={{ ...button, marginRight: 24 }} href="https://github.com/NetEase/tango">
-          立即体验
-        </Button>
-        <Button style={button} href="https://netease.github.io/tango-site/">
-          使用指南
-        </Button>
-      </Box>
-      <Section style={sectionPart}>
+        <Box>
+          <Button style={{ ...button, marginRight: 24 }} href="https://github.com/NetEase/tango">
+            立即体验
+          </Button>
+          <Button style={button} href="https://netease.github.io/tango-site/">
+            使用指南
+          </Button>
+        </Box>
+      </Section>
+      <Section p="24px">
         <Heading as="h2" style={title}>
-          接入数据
+          TangoCMS
         </Heading>
-        <Row>
+        <Heading as="h3">关键数据</Heading>
+        <Row style={{ tableLayout: 'fixed' }}>
           <Column>
             <Card>
               <Stat label="累计上线页面" number="1,114" helpText="环比增加 10%" />
@@ -93,6 +80,8 @@ export const ReportMail = () => (
               <Stat label="本月上线页面" number="61" helpText="环比增加 5%" />
             </Card>
           </Column>
+        </Row>
+        <Row style={{ tableLayout: 'fixed' }}>
           <Column>
             <Card>
               <Stat label="本月在线提交次数" number="327" helpText="help" />
@@ -125,12 +114,29 @@ export const ReportMail = () => (
         </List>
       </Section>
     </Container>
-    <Box style={footer}>
-      <Text>
-        <Button style={footerButton}>🏅Tango金牌服务群：7788-7788</Button>
+    <Section
+      style={{
+        padding: '0 30px',
+        textAlign: 'center',
+      }}
+    >
+      <Text style={{ margin: 12, color: '#9199a1' }}>
+        若您有相关疑问或需求支持请点击下方按钮加入 Tango 金牌服务群咨询
       </Text>
-      <Text style={footerAddress}>此邮件使用 Tango 搭建, 网易云音乐-技术中心-公共技术团队</Text>
-    </Box>
+      <Button
+        style={{
+          padding: '8px 16px',
+          borderRadius: '4px',
+          border: '1px solid #fff',
+          color: '#fff',
+        }}
+      >
+        🏅Tango金牌服务群：7788-7788
+      </Button>
+      <Text style={{ margin: 12, fontSize: '14px', lineHeight: '15px', color: '#9199a1' }}>
+        此邮件使用 Tango 搭建, 网易云音乐-技术中心-公共技术团队
+      </Text>
+    </Section>
   </Email>
 );
 
@@ -157,33 +163,11 @@ const title = {
   color: '#0c0d0e',
 };
 
-const footer = {
-  width: '680px',
-  maxWidth: '100%',
-  margin: '32px auto 0 auto',
-  padding: '0 30px',
-  textAlign: 'center',
-};
-
-const footerAddress = {
-  margin: '4px',
-  fontSize: '14px',
-  lineHeight: '15px',
-  color: '#9199a1',
-};
-
 const button = {
   padding: '8px 16px',
   borderRadius: '4px',
   border: '1px solid #FFF',
   color: '#FFF',
-};
-
-const footerButton = {
-  padding: '8px 16px',
-  borderRadius: '4px',
-  border: '1px solid #333',
-  color: '#333',
 };
 
 export function Layout() {

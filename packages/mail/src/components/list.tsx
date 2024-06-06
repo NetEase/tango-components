@@ -3,15 +3,24 @@ import React from 'react';
 import cx from 'classnames';
 import { Placeholder } from './placeholder';
 
-export type ListProps = React.ComponentPropsWithoutRef<'ul'>;
+export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
+  /**
+   * 列表项的标记类型
+   */
+  marker?: 'disc' | 'none';
+}
 
-export function ListView({ children, style, className, ...props }: ListProps) {
+export function ListView({ marker = 'disc', children, style, className, ...props }: ListProps) {
+  const classNames = cx(
+    'm-0 p-0 list-inside text-slate-900',
+    {
+      'list-none': marker === 'none',
+      'list-disc': marker === 'disc',
+    },
+    className,
+  );
   return (
-    <ul
-      {...props}
-      className={cx('m-0 p-0 list-disc list-inside text-slate-900', className)}
-      style={listStyle(style)}
-    >
+    <ul {...props} className={classNames} style={listStyle(style)}>
       {children}
     </ul>
   );

@@ -27,7 +27,15 @@ export default {
 };
 
 export const ReportMail = () => (
-  <Email bg="#333" preview="tango month report">
+  <Email
+    bg="#333"
+    preview="tango month report"
+    fontConfig={{
+      fontFamily: 'PingFang SC',
+      fallbackFontFamily:
+        '-apple-system-font, "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", sans-serif',
+    }}
+  >
     <Container
       style={{
         width: 650,

@@ -28,6 +28,11 @@ export const Email: ComponentPrototypeType = {
       setter: 'codeSetter',
     },
     {
+      name: 'head',
+      title: 'head 元素',
+      setter: 'codeSetter',
+    },
+    {
       name: 'fontConfig',
       title: '字体配置',
       props: [

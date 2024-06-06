@@ -33,14 +33,16 @@ const sectionPart = {
 };
 
 export const ReportMail = () => (
-  <Email bg="#f3f3f5" preview="tango month report">
+  <Email bg="#333" preview="tango month report">
     <Container
       style={{
-        width: 750,
-        maxWidth: '100%',
-        margin: '0 auto',
+        width: 200,
+        maxWidth: 200,
+        // maxWidth: '100%',
+        // margin: '0 auto',
         backgroundColor: '#ffffff',
       }}
+      className="my-0 mx-auto w-[200px]"
     >
       <Box
         style={{

@@ -12,7 +12,19 @@ export const List: ComponentPrototypeType = {
   initChildren:
     '<ListItem text="list item" /><ListItem text="list item" /><ListItem text="list item" />',
   relatedImports: ['ListItem'],
-  props: [...STYLE_PROPS],
+  props: [
+    {
+      name: 'marker',
+      title: '标记类型',
+      setter: 'choiceSetter',
+      options: [
+        { label: '实心圆点', value: 'disc' },
+        { label: '无', value: 'none' },
+      ],
+      defaultValue: 'disc',
+    },
+    ...STYLE_PROPS,
+  ],
 };
 
 export const ListItem: ComponentPrototypeType = {

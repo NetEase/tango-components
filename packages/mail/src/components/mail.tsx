@@ -31,6 +31,11 @@ export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
    */
   preview?: string;
   /**
+   * head element
+   * @example <style>{`body { background: '#fff'; } `}</style>
+   */
+  head?: React.ReactNode;
+  /**
    * 字体配置
    */
   fontConfig?: FontProps;
@@ -49,6 +54,7 @@ function MailView({
   dir,
   title,
   preview,
+  head,
   fontConfig,
   tailwindConfig,
   bg,
@@ -60,6 +66,7 @@ function MailView({
       <Preview>{preview}</Preview>
       <Head>
         <title>{title}</title>
+        {head}
         {fontConfig ? <Font {...fontConfig} /> : null}
       </Head>
       <Tailwind config={tailwindConfig}>

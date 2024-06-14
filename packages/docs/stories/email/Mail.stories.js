@@ -13,6 +13,7 @@ import {
   Row,
   List,
   ListItem,
+  Table,
   Email,
   render,
   Html,
@@ -120,6 +121,23 @@ export const ReportMail = () => (
           </ListItem>
           <ListItem>🤖 Tango AI 智能助手 Beta 版本上线</ListItem>
         </List>
+      </Section>
+      <Section p="24px">
+        <Heading as="h3">表格数据</Heading>
+        <Table
+          columns={[
+            { dataIndex: 'name', title: 'Name' },
+            { dataIndex: 'color', title: 'Color' },
+            { dataIndex: 'category', title: 'Category' },
+            { dataIndex: 'price', title: 'Price' },
+          ]}
+          dataSource={[
+            { id: '1', name: 'Apple', color: 'Red', category: 'Fruit', price: '$1.00' },
+            { id: '2', name: 'Banana', color: 'Yellow', category: 'Fruit', price: '$0.50' },
+            { id: '3', name: 'Carrot', color: 'Orange', category: 'Vegetable', price: '$0.25' },
+            { id: '4', name: 'Daikon', color: 'White', category: 'Vegetable', price: '$0.75' },
+          ]}
+        ></Table>
       </Section>
     </Container>
     <Section

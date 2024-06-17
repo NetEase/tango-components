@@ -137,6 +137,13 @@ export const ReportMail = () => (
             { id: '3', name: 'Carrot', color: 'Orange', category: 'Vegetable', price: '$0.25' },
             { id: '4', name: 'Daikon', color: 'White', category: 'Vegetable', price: '$0.75' },
           ]}
+          getRowProps={(data, index) => {
+            if (index === 1) {
+              return {
+                className: 'bg-red-500 text-white',
+              };
+            }
+          }}
         ></Table>
       </Section>
     </Container>

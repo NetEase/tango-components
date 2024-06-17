@@ -1,10 +1,28 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
+import cx from 'classnames';
 
 interface TableColumnData {
-  key: string;
+  /**
+   * 唯一标识符，如果没有提供该属性，则使用 `dataIndex` 作为唯一标识符
+   */
+  key?: string;
+  /**
+   * 列标题
+   */
   title: string;
+  /**
+   * 单元格的数据源字段
+   */
   dataIndex: string;
+  /**
+   * 自定义渲染单元格
+   * @param cellData
+   * @param rowData
+   * @param rowIndex
+   * @returns
+   */
+  render?: (cellData: React.ReactNode, rowData: any, rowIndex: number) => React.ReactNode;
 }
 
 export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
@@ -24,9 +42,15 @@ export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
    * 数据源的主键
    */
   primaryKey?: string;
+  /**
+   * 设置行属性
+   * @param rowData
+   * @param rowIndex
+   * @returns
+   */
+  getRowProps?: (rowData: any, rowIndex: number) => React.HTMLAttributes<HTMLTableRowElement>;
 }
 
-// TODO: table cell colors
 function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }: TableProps) {
   return (
     <table className="w-full text-sm text-left text-gray-500" {...props}>
@@ -35,7 +59,7 @@ function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }
           {caption}
         </caption>
       ) : null}
-      <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+      <thead className="text-xs text-gray-700 uppercase bg-gray-100">
         <tr>
           {columns?.map((column) => (
             <th key={column.key || column.dataIndex} scope="col" className="px-6 py-3">
@@ -45,13 +69,15 @@ function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }
         </tr>
       </thead>
       <tbody>
-        {dataSource?.map((data) => {
+        {dataSource?.map((data, rowIndex) => {
           const key = data[primaryKey];
+          const { className: rowClassName, ...rowProps } =
+            props.getRowProps?.(data, rowIndex) || {};
           return (
-            <tr key={key} className="bg-white border-b">
-              {columns?.map((column) => (
-                <td key={column.key || column.dataIndex} className="px-6 py-4">
-                  {data[column.dataIndex]}
+            <tr {...rowProps} key={key} className={cx('bg-white', 'border-b', rowClassName)}>
+              {columns?.map(({ key, dataIndex, render = renderCell }) => (
+                <td key={key || dataIndex} className="px-6 py-4">
+                  {render(data[dataIndex], data, rowIndex)}
                 </td>
               ))}
             </tr>
@@ -60,6 +86,10 @@ function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }
       </tbody>
     </table>
   );
+}
+
+function renderCell(cellData: React.ReactNode, rowData: any, rowIndex: number) {
+  return cellData;
 }
 
 export const Table = defineComponent(TableView, {

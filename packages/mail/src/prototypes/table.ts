@@ -40,5 +40,11 @@ export const Table: IComponentPrototype = {
       setter: 'textSetter',
       initValue: 'id',
     },
+    {
+      name: 'getRowProps',
+      title: '设置行属性',
+      setter: 'codeSetter',
+      tip: '设置行属性，设置格式为 (rowData: any, rowIndex: number) => React.HTMLAttributes<HTMLTableRowElement>',
+    },
   ],
 };

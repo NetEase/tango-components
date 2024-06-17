@@ -18,4 +18,5 @@ export * from './preview';
 export * from './row';
 export * from './section';
 export * from './stat';
+export * from './table';
 export * from './text';

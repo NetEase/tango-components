@@ -16,5 +16,7 @@ export const STYLE_PROPS: IComponentProp[] = [
     name: 'className',
     title: '类名',
     setter: 'textSetter',
+    tip: '支持 tailwindcss 的类名',
+    docs: 'https://tailwindcss.com/docs/customizing-colors',
   },
 ];

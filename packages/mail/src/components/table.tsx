@@ -49,20 +49,49 @@ export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
    * @returns
    */
   getRowProps?: (rowData: any, rowIndex: number) => React.HTMLAttributes<HTMLTableRowElement>;
+  /**
+   * 表格布局算法
+   */
+  tableLayout?: 'auto' | 'fixed';
+  /**
+   * 自定义表格类
+   */
+  className?: string;
+  /**
+   * 自定义表格头类
+   */
+  headClassName?: string;
 }
 
-function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }: TableProps) {
+function TableView({
+  caption,
+  columns,
+  dataSource,
+  primaryKey = 'id',
+  tableLayout,
+  style,
+  className,
+  headClassName,
+  ...props
+}: TableProps) {
   return (
-    <table className="w-full text-sm text-left text-gray-500" {...props}>
+    <table
+      className={cx('w-full text-sm text-left text-gray-500', className)}
+      style={{
+        tableLayout,
+        ...style,
+      }}
+      {...props}
+    >
       {caption ? (
-        <caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+        <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white">
           {caption}
         </caption>
       ) : null}
-      <thead className="text-xs text-gray-700 uppercase bg-gray-100">
+      <thead className={cx('text-xs text-gray-700 uppercase bg-gray-100', headClassName)}>
         <tr>
           {columns?.map((column) => (
-            <th key={column.key || column.dataIndex} scope="col" className="px-6 py-3">
+            <th key={column.key || column.dataIndex} scope="col" className="px-4 py-2">
               {column.title}
             </th>
           ))}
@@ -71,12 +100,20 @@ function TableView({ caption, columns, dataSource, primaryKey = 'id', ...props }
       <tbody>
         {dataSource?.map((data, rowIndex) => {
           const key = data[primaryKey];
-          const { className: rowClassName, ...rowProps } =
-            props.getRowProps?.(data, rowIndex) || {};
+          const {
+            className: rowClassName,
+            style: rowStyle,
+            ...rowProps
+          } = props.getRowProps?.(data, rowIndex) || {};
           return (
-            <tr {...rowProps} key={key} className={cx('bg-white', 'border-b', rowClassName)}>
+            <tr
+              {...rowProps}
+              key={key}
+              style={{ borderBottomStyle: 'solid', ...rowStyle }}
+              className={cx('bg-white border-b border-gray-200', rowClassName)}
+            >
               {columns?.map(({ key, dataIndex, render = renderCell }) => (
-                <td key={key || dataIndex} className="px-6 py-4">
+                <td key={key || dataIndex} className="px-4 py-3">
                   {render(data[dataIndex], data, rowIndex)}
                 </td>
               ))}

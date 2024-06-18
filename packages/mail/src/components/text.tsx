@@ -5,20 +5,28 @@ import cx from 'classnames';
 
 export type TextProps = React.ComponentPropsWithoutRef<'p'> & {
   /**
+   * 文本大小
+   */
+  fontSize?: number;
+  /**
+   * 文本色
+   */
+  color: string;
+  /**
    * 避免文本换行
    */
   isTruncate?: boolean;
 };
 
 export const Text = defineComponent(
-  ({ isTruncate, className, ...props }: TextProps) => {
+  ({ isTruncate, color, style, fontSize, className, ...props }: TextProps) => {
     const classNames = cx(
       {
         truncate: isTruncate,
       },
       className,
     );
-    return <Comp className={classNames} {...props} />;
+    return <Comp className={classNames} style={{ color, fontSize, ...style }} {...props} />;
   },
   {
     name: 'Text',

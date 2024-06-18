@@ -21,7 +21,7 @@ export const menuData = {
     },
     {
       title: '布局',
-      items: ['Columns2', 'Columns3', 'Row', 'Column', 'Section'],
+      items: ['Columns2', 'Columns3', 'Row', 'Column', 'Section', 'Box'],
     },
   ],
 };

@@ -27,6 +27,16 @@ export const Heading: ComponentPrototypeType = {
         { value: 'h6', label: 'H6' },
       ],
     },
+    {
+      name: 'mt',
+      title: '上边距',
+      setter: 'codeSetter',
+    },
+    {
+      name: 'mb',
+      title: '下边距',
+      setter: 'codeSetter',
+    },
     ...STYLE_PROPS,
   ],
 };

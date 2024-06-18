@@ -8,5 +8,27 @@ export const Box: ComponentPrototypeType = {
   icon: 'icon-box',
   type: 'element',
   hasChildren: true,
-  props: [...STYLE_PROPS],
+  props: [
+    {
+      name: 'p',
+      title: '内间距',
+      setter: 'codeSetter',
+    },
+    {
+      name: 'm',
+      title: '外间距',
+      setter: 'codeSetter',
+    },
+    {
+      name: 'bg',
+      title: '背景色',
+      setter: 'colorSetter',
+    },
+    {
+      name: 'color',
+      title: '文本色',
+      setter: 'colorSetter',
+    },
+    ...STYLE_PROPS,
+  ],
 };

@@ -12,7 +12,7 @@ export const Section: ComponentPrototypeType = {
     {
       name: 'p',
       title: '内间距',
-      setter: 'textSetter',
+      setter: 'codeSetter',
       tip: '设置具体的带单位的间距值，例如 12px',
     },
     {

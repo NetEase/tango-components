@@ -20,7 +20,7 @@ export const Columns2: ComponentPrototypeType = {
   package: '@music163/tango-mail',
   icon: 'icon-column-2',
   type: 'snippet',
-  relatedImports: ['Row', 'Column'],
+  relatedImports: ['Row', 'Column', 'Section'],
   initChildren:
     '<Row><Column><Section></Section></Column><Column><Section></Section></Column></Row>',
 };
@@ -31,7 +31,7 @@ export const Columns3: ComponentPrototypeType = {
   package: '@music163/tango-mail',
   icon: 'icon-column-3',
   type: 'snippet',
-  relatedImports: ['Row', 'Column'],
+  relatedImports: ['Row', 'Column', 'Section'],
   initChildren:
     '<Row><Column><Section></Section></Column><Column><Section></Section></Column><Column><Section></Section></Column></Row>',
 };

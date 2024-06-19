@@ -16,6 +16,7 @@ export const menuData = {
         'Hr',
         'Markdown',
         'Stat',
+        'List',
         'Table',
       ],
     },

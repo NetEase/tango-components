@@ -1,23 +1,25 @@
-export * as prototypes from './prototypes';
+export * as prototypes from './components/prototype';
 
 export const menuData = {
   common: [
     {
       title: '常用',
       items: [
+        'Button',
+        'Text',
         'Heading',
         'Link',
-        'Text',
-        'Img',
-        'Button',
-        'Card',
         // 'CodeBlock',
         'CodeInline',
         'Hr',
         'Markdown',
-        'Stat',
+        'List',
         'Table',
       ],
+    },
+    {
+      title: '展示',
+      items: ['Badge', 'Img', 'Stat', 'Card'],
     },
     {
       title: '布局',

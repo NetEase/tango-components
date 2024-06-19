@@ -1,3 +1,4 @@
+export * from './badge/prototype';
 export * from './box/prototype';
 export * from './button/prototype';
 export * from './card/prototype';

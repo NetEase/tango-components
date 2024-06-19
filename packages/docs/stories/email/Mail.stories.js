@@ -16,6 +16,7 @@ import {
   Table,
   Email,
   render,
+  Video,
   Html,
   Markdown,
 } from '@music163/tango-mail';
@@ -146,6 +147,9 @@ export const ReportMail = () => (
           }}
         ></Table>
       </Section>
+      <Section p="24px">
+        <Video src="" />
+      </Section>
     </Container>
     <Section
       style={{
@@ -207,8 +211,8 @@ export function Layout() {
   return (
     <Container>
       <Row>
-        <Column style={{ background: '#333' }}>1</Column>
-        <Column style={{ background: '#333' }}>2</Column>
+        <Column style={{ background: '#333', color: '#fff', padding: 24 }}>1</Column>
+        <Column style={{ background: '#333', color: '#fff', padding: 24 }}>2</Column>
       </Row>
     </Container>
   );

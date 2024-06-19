@@ -1,7 +1,7 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
 import cx from 'classnames';
-import { Placeholder } from './placeholder';
+import { Placeholder } from '../placeholder';
 
 export interface ListProps extends React.ComponentPropsWithoutRef<'ul'> {
   /**

@@ -1,5 +1,5 @@
 import { ComponentPrototypeType } from '@music163/tango-helpers';
-import { STYLE_PROPS } from '../helpers';
+import { STYLE_PROPS } from '../../helpers';
 
 export const Link: ComponentPrototypeType = {
   name: 'Link',

@@ -1,4 +1,4 @@
-export * as prototypes from './prototypes';
+export * as prototypes from './components/prototype';
 
 export const menuData = {
   common: [

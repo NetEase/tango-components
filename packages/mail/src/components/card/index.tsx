@@ -1,7 +1,7 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
-import { Placeholder } from './placeholder';
 import cx from 'classnames';
+import { Placeholder } from '../placeholder';
 
 export type CardProps = React.ComponentPropsWithoutRef<'div'>;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineComponent } from '@music163/tango-boot';
-import { Placeholder } from './placeholder';
+import { Placeholder } from '../placeholder';
 
 export interface SectionProps extends React.ComponentPropsWithoutRef<'table'> {
   /**

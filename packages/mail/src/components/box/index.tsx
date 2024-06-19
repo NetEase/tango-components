@@ -1,6 +1,6 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
-import { Placeholder } from './placeholder';
+import { Placeholder } from '../placeholder';
 
 export interface BoxProps extends React.ComponentPropsWithoutRef<'div'> {
   p?: string;

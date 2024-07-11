@@ -10,6 +10,7 @@ import {
   TailwindConfig,
 } from '@react-email/components';
 import React from 'react';
+import cx from 'classnames';
 
 export interface EmailProps extends React.ComponentPropsWithoutRef<'div'> {
   /**
@@ -59,6 +60,7 @@ function MailView({
   tailwindConfig,
   bg,
   style,
+  className,
   children,
 }: EmailProps) {
   return (
@@ -70,7 +72,7 @@ function MailView({
         {fontConfig ? <Font {...fontConfig} /> : null}
       </Head>
       <Tailwind config={tailwindConfig}>
-        <Body className="TangoMailBody" style={mailBodyStyle({ ...style, bg })}>
+        <Body className={cx('TangoMailBody', className)} style={mailBodyStyle({ ...style, bg })}>
           {children}
         </Body>
       </Tailwind>

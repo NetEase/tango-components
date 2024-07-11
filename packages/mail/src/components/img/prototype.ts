@@ -11,7 +11,7 @@ export const Img: ComponentPrototypeType = {
     {
       name: 'src',
       title: '图片地址',
-      setter: 'textSetter',
+      setter: 'imageSetter',
       initValue: 'https://via.placeholder.com/200',
     },
     {

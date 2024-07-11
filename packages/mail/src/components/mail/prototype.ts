@@ -24,8 +24,13 @@ export const Email: ComponentPrototypeType = {
     },
     {
       name: 'style',
-      title: '样式',
+      title: 'body的自定义样式',
       setter: 'codeSetter',
+    },
+    {
+      name: 'className',
+      title: 'body的自定义类名',
+      setter: 'textSetter',
     },
     {
       name: 'head',

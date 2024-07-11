@@ -1,6 +1,7 @@
 import { defineComponent } from '@music163/tango-boot';
 import React from 'react';
 import cx from 'classnames';
+import { Dict } from '@music163/tango-helpers';
 
 interface TableColumnData {
   /**
@@ -37,7 +38,7 @@ export interface TableProps extends React.ComponentPropsWithoutRef<'table'> {
   /**
    * 数据源
    */
-  dataSource?: object[];
+  dataSource?: Dict[];
   /**
    * 数据源的主键
    */
@@ -84,7 +85,7 @@ function TableView({
       {...props}
     >
       {caption ? (
-        <caption className="p-5 text-lg font-semibold text-left text-gray-900 bg-white">
+        <caption className="py-2 text-[16px] font-semibold text-left text-gray-900 bg-white caption-top">
           {caption}
         </caption>
       ) : null}

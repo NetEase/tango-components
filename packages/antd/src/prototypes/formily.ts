@@ -1,4 +1,4 @@
-import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { ComponentPrototypeType, Dict } from '@music163/tango-helpers';
 import { omitProps } from '../helpers';
 import { Input, TextArea } from './input';
 import { Select } from './select';
@@ -12,7 +12,7 @@ import { Switch } from './switch';
 import { TreeSelect } from './tree-select';
 import { Button } from './button';
 
-const componentPrototypeMap = {
+const componentPrototypeMap: Dict = {
   Input,
   Select,
   TextArea,

@@ -1,4 +1,4 @@
-import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { ComponentPrototypeType, Dict } from '@music163/tango-helpers';
 import { Input, Password, TextArea } from './input';
 import { InputNumber } from './input-number';
 import { Switch } from './switch';
@@ -14,7 +14,7 @@ import { Upload } from './upload';
 import { StylePrototypes } from './common';
 import { omitProps } from '../helpers';
 
-const componentMap = {
+const componentMap: Dict = {
   Input,
   Password,
   TextArea,

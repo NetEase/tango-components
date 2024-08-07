@@ -17,6 +17,10 @@ interface TableColumnData {
    */
   dataIndex: string;
   /**
+   * 列宽
+   */
+  width?: string;
+  /**
    * 自定义渲染单元格
    * @param cellData
    * @param rowData
@@ -80,6 +84,7 @@ function TableView({
       className={cx('w-full text-sm text-left text-gray-500', className)}
       style={{
         tableLayout,
+        borderCollapse: 'collapse',
         ...style,
       }}
       {...props}
@@ -92,7 +97,12 @@ function TableView({
       <thead className={cx('text-xs text-gray-700 uppercase bg-gray-100', headClassName)}>
         <tr>
           {columns?.map((column) => (
-            <th key={column.key || column.dataIndex} scope="col" className="px-4 py-2">
+            <th
+              key={column.key || column.dataIndex}
+              scope="col"
+              className="px-4 py-2"
+              style={{ width: column.width }}
+            >
               {column.title}
             </th>
           ))}

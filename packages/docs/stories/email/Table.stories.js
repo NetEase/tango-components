@@ -1,4 +1,4 @@
-import { Email, Table, Container, Box } from '@music163/tango-mail';
+import { Email, Table, Container } from '@music163/tango-mail';
 
 export default {
   title: 'email/Table',
@@ -8,7 +8,7 @@ export default {
 };
 
 const columns = [
-  { dataIndex: 'name', title: 'Name' },
+  { dataIndex: 'name', title: 'Name', width: '200px' },
   { dataIndex: 'color', title: 'Color' },
   { dataIndex: 'category', title: 'Category' },
   { dataIndex: 'price', title: 'Price' },

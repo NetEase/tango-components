@@ -80,12 +80,18 @@ export const Tooltip: ComponentPrototypeType = {
       group: 'style',
       title: '卡片样式',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
     {
       name: 'overlayInnerStyle',
       group: 'style',
       title: '卡片内容区域样式对象',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
     {
       name: 'placement',

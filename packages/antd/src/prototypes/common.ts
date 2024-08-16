@@ -5,6 +5,9 @@ export const StylePrototypes: ComponentPropType[] = [
     name: 'style',
     title: '样式对象',
     setter: 'expressionSetter',
+    setterProps: {
+      expressionType: 'cssObject'
+    },
     group: 'style',
     autoCompleteOptions: ['{}'],
   },

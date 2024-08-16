@@ -64,6 +64,9 @@ export const Transfer: ComponentPrototypeType = {
       group: 'style',
       title: '操作栏自定义样式',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
     {
       name: 'pagination',

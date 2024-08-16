@@ -166,8 +166,11 @@ export const TreeSelect: ComponentPrototypeType = {
     {
       name: 'dropdownStyle',
       title: '下拉菜单的样式',
-      setter: 'jsonSetter',
+      setter: 'expressionSetter',
       group: 'style',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
     {
       name: 'filterTreeNode',

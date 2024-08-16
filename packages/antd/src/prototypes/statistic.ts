@@ -40,6 +40,9 @@ export const Statistic: ComponentPrototypeType = {
       group: 'style',
       title: '设置数值的样式',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
   ],
 };
@@ -66,6 +69,9 @@ export const StatisticCountdown: ComponentPrototypeType = {
       group: 'style',
       title: '设置数值的样式',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
     },
     {
       name: 'onFinish',

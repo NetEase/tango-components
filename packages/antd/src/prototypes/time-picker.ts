@@ -89,6 +89,9 @@ export const TimePicker: ComponentPrototypeType = {
       name: 'popupStyle',
       title: '弹出层样式对象',
       setter: 'expressionSetter',
+      setterProps: {
+        expressionType: 'cssObject'
+      },
       group: 'style',
       autoCompleteOptions: ['{}'],
     },

@@ -45,7 +45,7 @@
     "@music163/formily": "^0.2.4",
     "@music163/foundation": "^0.2.3",
     "@music163/tango-boot": "^0.3.3",
-    "@music163/tango-helpers": "^1.2.2",
+    "@music163/tango-helpers": "^1.2.4",
     "antd": "4",
     "classnames": "^2.3.2",
     "coral-system": "^1.0.6"

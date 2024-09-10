@@ -1,4 +1,5 @@
 import { IComponentPrototype } from '@music163/tango-helpers';
+import { STYLE_PROPS } from '../../helpers';
 
 export const Badge: IComponentPrototype = {
   name: 'Badge',
@@ -38,5 +39,6 @@ export const Badge: IComponentPrototype = {
       title: '胶囊样式',
       setter: 'boolSetter',
     },
+    ...STYLE_PROPS,
   ],
 };

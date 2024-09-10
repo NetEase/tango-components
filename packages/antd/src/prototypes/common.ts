@@ -6,7 +6,7 @@ export const StylePrototypes: ComponentPropType[] = [
     title: '样式对象',
     setter: 'expressionSetter',
     setterProps: {
-      expressionType: 'cssObject'
+      expressionType: 'cssObject',
     },
     group: 'style',
     autoCompleteOptions: ['{}'],
@@ -14,7 +14,7 @@ export const StylePrototypes: ComponentPropType[] = [
   {
     name: 'className',
     title: '自定义样式类名',
-    setter: 'textSetter',
+    setter: 'classNameSetter',
     group: 'style',
   },
 ];

@@ -1,7 +1,7 @@
-import { ComponentPrototypeType } from '@music163/tango-helpers';
+import { IComponentPrototype } from '@music163/tango-helpers';
 import { StylePrototypes } from './common';
 
-export const Typography: ComponentPrototypeType = {
+export const Typography: IComponentPrototype = {
   name: 'Typography',
   title: '排版容器',
   package: '@music163/antd',
@@ -11,7 +11,7 @@ export const Typography: ComponentPrototypeType = {
   childrenName: ['Title', 'Paragraph'],
 };
 
-const commonTypographyProps: ComponentPrototypeType['props'] = [
+const commonTypographyProps: IComponentPrototype['props'] = [
   ...StylePrototypes,
   {
     name: 'type',
@@ -115,7 +115,7 @@ const commonTypographyProps: ComponentPrototypeType['props'] = [
   },
 ];
 
-export const Title: ComponentPrototypeType = {
+export const Title: IComponentPrototype = {
   name: 'Title',
   title: '标题',
   package: '@music163/antd',
@@ -134,11 +134,11 @@ export const Title: ComponentPrototypeType = {
       title: '标题级别',
       setter: 'pickerSetter',
       options: [
-        { label: 'h1', value: 1 },
-        { label: 'h2', value: 2 },
-        { label: 'h3', value: 3 },
-        { label: 'h4', value: 4 },
-        { label: 'h5', value: 5 },
+        { label: 'h1', value: '1' },
+        { label: 'h2', value: '2' },
+        { label: 'h3', value: '3' },
+        { label: 'h4', value: '4' },
+        { label: 'h5', value: '5' },
       ],
       tip: '数字越小，级别越大',
     },
@@ -146,7 +146,7 @@ export const Title: ComponentPrototypeType = {
   ],
 };
 
-export const Paragraph: ComponentPrototypeType = {
+export const Paragraph: IComponentPrototype = {
   name: 'Paragraph',
   title: '段落',
   package: '@music163/antd',

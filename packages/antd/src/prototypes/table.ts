@@ -488,7 +488,7 @@ export const TableColumn: ComponentPrototypeType = {
       title: '固定列',
       setter: 'choiceSetter',
       options: [
-        { label: '不锁', value: false },
+        { label: '不锁', value: undefined },
         { label: '左侧', value: 'left' },
         { label: '右侧', value: 'right' },
       ],

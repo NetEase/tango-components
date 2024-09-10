@@ -19,6 +19,13 @@ export const Basic = {
   },
 };
 
+export const FontWeight = {
+  args: {
+    children: 'hello world',
+    fontWeight: '500',
+  },
+};
+
 export const Empty = {
   args: {},
 };

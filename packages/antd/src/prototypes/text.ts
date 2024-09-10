@@ -56,9 +56,9 @@ export const Text: ComponentPrototypeType = {
       title: '字体粗细',
       setter: 'pickerSetter',
       options: [
-        { label: '正常', value: 400 },
-        { label: '加粗', value: 700 },
-        { label: '减细', value: 100 },
+        { label: '正常', value: "400" },
+        { label: '加粗', value: "700" },
+        { label: '减细', value: "100" },
       ],
     },
     {
